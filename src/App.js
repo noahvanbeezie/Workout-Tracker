@@ -1,11 +1,11 @@
 import React from 'react';
-import Landing from './Components/Landing/Landing'
+import route from './routes'
 import './App.css';
 
-function App() {
+function App(props) {
   return (
     <>
-     <Landing/>
+    {route}
     </>
   );
 }
