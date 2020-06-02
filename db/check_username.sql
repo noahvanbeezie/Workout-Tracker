@@ -1,0 +1,1 @@
+SELECT * FROM workout_users WHERE username = $1;
