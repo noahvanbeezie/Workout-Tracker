@@ -1,17 +1,23 @@
-import axios from 'axios'
-
 const initialState = {
-    player:{},
-    loading:false,
-    error:false
+    username:''
 }
 
-export default function authReducer(state, action){
-    if (!state) return{initialState}
-    if (!action) return{state}
+const GET_USER = 'GET_USER'
 
-    switch(action.type){
-        
+export function getUser(userObj){
+    return{
+        type:GET_USER,
+        payload:userObj
+    }
+
+}
+
+export default function authReducer(state=initialState, action){
+    const {type,payload} = action
+
+    switch(type){
+        case GET_USER:
+            return{...state,username:payload.username}
         default:
             return state
     }

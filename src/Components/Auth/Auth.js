@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import Input from '@material-ui/core/Input'
 import Button from '@material-ui/core/Button'
 import axios from 'axios'
+import {getUser} from '../../ducks/authReducer'
 
 function Auth(props){
     const [registered,setRegistered] = useState(true)
@@ -72,6 +73,10 @@ function Auth(props){
         </>
     )
 }
-
-export default connect()(Auth);
+const mapStateToProps = reduxState => {
+    return{
+        reduxState
+    }
+}
+export default connect(mapStateToProps,{getUser})(Auth);
 
