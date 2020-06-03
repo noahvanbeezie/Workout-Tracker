@@ -18,7 +18,6 @@ module.exports={
         }else{
             res.status(500).send('Incorrect Password')
         }
-
     },
     register: async (req,res) => {
         const {username,password} = req.body
