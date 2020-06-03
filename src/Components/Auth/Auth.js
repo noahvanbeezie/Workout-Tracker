@@ -32,7 +32,7 @@ function Auth(props){
             return
         }else{
             axios.post('/api/login',{username,password}).then(res => {
-
+                props.history.push('/landing')
             }).catch(err => {console.log(err)})
         }
     }
@@ -45,7 +45,7 @@ function Auth(props){
             return
         }else{
             axios.post('/api/register',{username,password}).then(res => {
-
+                props.history.push('/landing')
             }).catch(err => {console.log(err)})
         }
     }

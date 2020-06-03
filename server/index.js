@@ -3,7 +3,7 @@ const express = require('express')
 const session = require('express-session')
 const massive = require('massive')
 const {SESSION_SECRET, CONNECTION_STRING, SERVER_PORT} = process.env
-// const authController = require('./controllers/authController')
+const authController = require('./controllers/authController')
 
 const app = express()
 
@@ -30,6 +30,6 @@ massive({
     app.listen(port || 5724, () => console.log(`Connected to ${port}`))
 })
 // Auth
-// app.post('/api/login', authController.login)
-// app.post('/api/register', authController.register)
-// app.post('/api/logout', authController.logout)
+app.post('/api/login', authController.login)
+app.post('/api/register', authController.register)
+app.post('/api/logout', authController.logout)
