@@ -1,7 +1,10 @@
 CREATE TABLE workout_users (
     id SERIAL PRIMARY KEY,
     username VARCHAR (60),
-    password VARCHAR (240)
+    password VARCHAR (240),
+    weight INT,
+    feet INT,
+    inches INT
 );
 
 CREATE TABLE dayoneworkout (

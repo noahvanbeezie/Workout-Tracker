@@ -1,5 +1,8 @@
 const initialState = {
-    username:''
+    username:'',
+    weight:0,
+    feet:6,
+    inches:7
 }
 
 const GET_USER = 'GET_USER'
@@ -17,7 +20,7 @@ export default function authReducer(state=initialState, action){
 
     switch(type){
         case GET_USER:
-            return{...state,username:payload.username}
+            return{...state,username:payload.username,weight:payload.weight,feet:payload.feet,inches:payload.inches}
         default:
             return state
     }
