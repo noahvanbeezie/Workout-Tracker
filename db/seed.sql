@@ -2,6 +2,7 @@ CREATE TABLE workout_users (
     id SERIAL PRIMARY KEY,
     username VARCHAR (60),
     password VARCHAR (240),
+    age INT,
     weight INT,
     feet INT,
     inches INT
