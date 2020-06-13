@@ -1,9 +1,11 @@
 import React, {useState} from 'react'
 import Button from '@material-ui/core/Button'
 import Input from '@material-ui/core/Input'
+import Axios from 'axios'
 import {connect} from 'react-redux'
 
 function Profile(props){
+    const [username,setUsername] = useState(props.reduxState.username)
     const [edit,setEdit] = useState(false)
     const [age,setAge] = useState(null)
     const [feet,setFeet] = useState(null)
@@ -34,16 +36,16 @@ function Profile(props){
         }
     }
     function adjustAgeUp(){
-        if(age != 100){
+        if(age !== 100){
             setAge(age + 1)
         }
     }
     function adjustAgeDown(){
-        if(age != 18){
+        if(age !== 18){
             setAge(age - 1)
         }
     }
-    let ageInputField = e => {
+    let ageInputFieldAge = e => {
         if(e.target.value <= 100){
             if(e.target.value >= 18){
                 setAge(e.target.value)
@@ -55,12 +57,12 @@ function Profile(props){
         }
     }
     function adjustFeetUp(){
-        if(feet != 9){
+        if(feet !== 9){
             setFeet(feet + 1 )
         }
     }
     function adjustFeetDown(){
-        if(feet != 4){
+        if(feet !== 4){
             setFeet(feet - 1 )
         }
     }
@@ -84,6 +86,25 @@ function Profile(props){
             setInches(inches - 1)
         }
     }
+    let adjustInputFieldWeight = e => {
+        if(e.target.value <= 600){
+            if(e.target.value >= 50 ){
+                setWeight(e.target.value)
+            }else{
+                setWeight(50)
+            }
+        }else{
+            setWeight(600)
+        }
+    }
+
+    
+    function confirmChanges(){
+        Axios.post('/api/updateprefs',{age,weight,feet,inches,username}).then(() => {
+            setEdit(false)            
+        })
+
+    }
 
     console.log(props)
 
@@ -93,14 +114,22 @@ function Profile(props){
             {edit === false?(
             <div>
                 <p>Username:{props.reduxState.username}</p>
-                <p>Age:{props.reduxState.age}</p>
-                <p>Height:{props.reduxState.feet}{props.reduxState.inches}</p>
+                {props.reduxState.age ? (
+                    <p>Age:{props.reduxState.age}</p>
+                ):(
+                    <p>No age associated</p>
+                )}
+                {props.reduxState.feet ? (
+                    <p>Height:{props.reduxState.feet}{props.reduxState.inches}</p>
+                ):(
+                    <p>No height associated</p>
+                )}
                 {props.reduxState.weight ? (
                     <p>Weight:{props.reduxState.weight}</p>
                 ):(
                     <p>No weight associated</p>
                 )}
-                <p onClick={() => editView()}>Edit</p>
+                <Button onClick={() => editView()}>Edit View</Button>
             </div>
             ):(
             <div>
@@ -109,7 +138,7 @@ function Profile(props){
                     <p>Age:{age}</p>
                     <div>
                         <button onClick={() => adjustAgeDown()}>Down</button>
-                        <Input onChange={ageInputField}/>
+                        <Input onChange={ageInputFieldAge}/>
                         <button onClick={() => adjustAgeUp()}>Up</button>
                     </div>
                 </div>
@@ -125,9 +154,9 @@ function Profile(props){
                 </div>
                 <div>
                     <p>Weight:</p>
-                    <Input/>
+                    <Input onChange={adjustInputFieldWeight}/>
                 </div>
-                <p onClick={() => editView()}>Edit</p>
+                <Button onClick={() => confirmChanges()}>Confirm Changes</Button>
             </div>
             )}
         </div>

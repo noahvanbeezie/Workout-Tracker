@@ -1,0 +1,1 @@
+UPDATE workout_users SET age = $1, weight = $2,feet=$3,inches=$4 WHERE username = $5;
