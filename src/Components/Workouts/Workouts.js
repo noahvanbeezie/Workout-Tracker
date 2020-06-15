@@ -5,25 +5,86 @@ import {getUser} from '../../ducks/authReducer'
 import './Workouts.css'
 
 function Workouts(props){
+    // Day 1 vars
     const [workoutDay1Name1,setWorkoutDay1Name1] = useState('')
     const [workoutDay1Reps1,setWorkoutDay1Reps1] = useState(1)
     const [workoutDay1Sets1,setWorkoutDay1Sets1] = useState(1)
-
     const [workoutDay1Name2,setWorkoutDay1Name2] = useState('')
     const [workoutDay1Reps2,setWorkoutDay1Reps2] = useState(1)
     const [workoutDay1Sets2,setWorkoutDay1Sets2] = useState(1)
-
     const [workoutDay1Name3,setWorkoutDay1Name3] = useState('')
     const [workoutDay1Reps3,setWorkoutDay1Reps3] = useState(1)
     const [workoutDay1Sets3,setWorkoutDay1Sets3] = useState(1)
-
     const [workoutDay1Name4,setWorkoutDay1Name4] = useState('')
     const [workoutDay1Reps4,setWorkoutDay1Reps4] = useState(1)
     const [workoutDay1Sets4,setWorkoutDay1Sets4] = useState(1)
-
     const [workoutDay1Name5,setWorkoutDay1Name5] = useState('')
     const [workoutDay1Reps5,setWorkoutDay1Reps5] = useState(1)
     const [workoutDay1Sets5,setWorkoutDay1Sets5] = useState(1)
+    // Day 2 vars
+    const [workoutDay2Name1,setWorkoutDay2Name1] = useState('')
+    const [workoutDay2Reps1,setWorkoutDay2Reps1] = useState(1)
+    const [workoutDay2Sets1,setWorkoutDay2Sets1] = useState(1)
+    const [workoutDay2Name2,setWorkoutDay2Name2] = useState('')
+    const [workoutDay2Reps2,setWorkoutDay2Reps2] = useState(1)
+    const [workoutDay2Sets2,setWorkoutDay2Sets2] = useState(1)
+    const [workoutDay2Name3,setWorkoutDay2Name3] = useState('')
+    const [workoutDay2Reps3,setWorkoutDay2Reps3] = useState(1)
+    const [workoutDay2Sets3,setWorkoutDay2Sets3] = useState(1)
+    const [workoutDay2Name4,setWorkoutDay2Name4] = useState('')
+    const [workoutDay2Reps4,setWorkoutDay2Reps4] = useState(1)
+    const [workoutDay2Sets4,setWorkoutDay2Sets4] = useState(1)
+    const [workoutDay2Name5,setWorkoutDay2Name5] = useState('')
+    const [workoutDay2Reps5,setWorkoutDay2Reps5] = useState(1)
+    const [workoutDay2Sets5,setWorkoutDay2Sets5] = useState(1)
+    // Day 3 vars
+    const [workoutDay3Name1,setWorkoutDay3Name1] = useState('')
+    const [workoutDay3Reps1,setWorkoutDay3Reps1] = useState(1)
+    const [workoutDay3Sets1,setWorkoutDay3Sets1] = useState(1)
+    const [workoutDay3Name2,setWorkoutDay3Name2] = useState('')
+    const [workoutDay3Reps2,setWorkoutDay3Reps2] = useState(1)
+    const [workoutDay3Sets2,setWorkoutDay3Sets2] = useState(1)
+    const [workoutDay3Name3,setWorkoutDay3Name3] = useState('')
+    const [workoutDay3Reps3,setWorkoutDay3Reps3] = useState(1)
+    const [workoutDay3Sets3,setWorkoutDay3Sets3] = useState(1)
+    const [workoutDay3Name4,setWorkoutDay3Name4] = useState('')
+    const [workoutDay3Reps4,setWorkoutDay3Reps4] = useState(1)
+    const [workoutDay3Sets4,setWorkoutDay3Sets4] = useState(1)
+    const [workoutDay3Name5,setWorkoutDay3Name5] = useState('')
+    const [workoutDay3Reps5,setWorkoutDay3Reps5] = useState(1)
+    const [workoutDay3Sets5,setWorkoutDay3Sets5] = useState(1)
+    // Day 4 vars
+    const [workoutDay4Name1,setWorkoutDay4Name1] = useState('')
+    const [workoutDay4Reps1,setWorkoutDay4Reps1] = useState(1)
+    const [workoutDay4Sets1,setWorkoutDay4Sets1] = useState(1)
+    const [workoutDay4Name2,setWorkoutDay4Name2] = useState('')
+    const [workoutDay4Reps2,setWorkoutDay4Reps2] = useState(1)
+    const [workoutDay4Sets2,setWorkoutDay4Sets2] = useState(1)
+    const [workoutDay4Name3,setWorkoutDay4Name3] = useState('')
+    const [workoutDay4Reps3,setWorkoutDay4Reps3] = useState(1)
+    const [workoutDay4Sets3,setWorkoutDay4Sets3] = useState(1)
+    const [workoutDay4Name4,setWorkoutDay4Name4] = useState('')
+    const [workoutDay4Reps4,setWorkoutDay4Reps4] = useState(1)
+    const [workoutDay4Sets4,setWorkoutDay4Sets4] = useState(1)
+    const [workoutDay4Name5,setWorkoutDay4Name5] = useState('')
+    const [workoutDay4Reps5,setWorkoutDay4Reps5] = useState(1)
+    const [workoutDay4Sets5,setWorkoutDay4Sets5] = useState(1)
+    // Day 5 vars
+    const [workoutDay5Name1,setWorkoutDay5Name1] = useState('')
+    const [workoutDay5Reps1,setWorkoutDay5Reps1] = useState(1)
+    const [workoutDay5Sets1,setWorkoutDay5Sets1] = useState(1)
+    const [workoutDay5Name2,setWorkoutDay5Name2] = useState('')
+    const [workoutDay5Reps2,setWorkoutDay5Reps2] = useState(1)
+    const [workoutDay5Sets2,setWorkoutDay5Sets2] = useState(1)
+    const [workoutDay5Name3,setWorkoutDay5Name3] = useState('')
+    const [workoutDay5Reps3,setWorkoutDay5Reps3] = useState(1)
+    const [workoutDay5Sets3,setWorkoutDay5Sets3] = useState(1)
+    const [workoutDay5Name4,setWorkoutDay5Name4] = useState('')
+    const [workoutDay5Reps4,setWorkoutDay5Reps4] = useState(1)
+    const [workoutDay5Sets4,setWorkoutDay5Sets4] = useState(1)
+    const [workoutDay5Name5,setWorkoutDay5Name5] = useState('')
+    const [workoutDay5Reps5,setWorkoutDay5Reps5] = useState(1)
+    const [workoutDay5Sets5,setWorkoutDay5Sets5] = useState(1)
 
     // Workout 1 Day 1
     let day1Name1 = e =>{
@@ -145,6 +206,250 @@ function Workouts(props){
             setWorkoutDay1Sets5(workoutDay1Sets5 + 1)
         }
     }
+    // 
+    // Workout 1 Day 2
+    // 
+    let day2Name1 = e =>{
+        setWorkoutDay2Name1(e.target.value)
+    }
+    function day2Reps1Down(){
+        if(workoutDay2Reps1 > 1){
+            setWorkoutDay2Reps1(workoutDay2Reps1 - 1)
+        }
+    }
+    function day2Reps1Up(){
+        if(workoutDay2Reps1 < 30){
+            setWorkoutDay2Reps1(workoutDay2Reps1 + 1)
+        }
+    }
+    function day2Sets1Down(){
+        if(workoutDay2Sets1 >1){
+            setWorkoutDay2Sets1(workoutDay2Sets1 - 1)
+        }
+    }
+    function day2Sets1Up(){
+        if(workoutDay2Sets1 < 10){
+            setWorkoutDay2Sets1(workoutDay2Sets1 + 1)
+        }
+    }
+    // Workout 2 Day 2
+    let day2Name2 = e =>{
+        setWorkoutDay2Name2(e.target.value)
+    }
+    function day2Reps2Down(){
+        if(workoutDay2Reps2 > 1){
+            setWorkoutDay2Reps2(workoutDay2Reps2 - 1)
+        }
+    }
+    function day2Reps2Up(){
+        if(workoutDay2Reps2 < 30){
+            setWorkoutDay2Reps2(workoutDay2Reps2 + 1)
+        }
+    }
+    function day2Sets2Down(){
+        if(workoutDay2Sets2 >1){
+            setWorkoutDay2Sets2(workoutDay2Sets2 - 1)
+        }
+    }
+    function day2Sets2Up(){
+        if(workoutDay2Sets2 < 10){
+            setWorkoutDay2Sets2(workoutDay2Sets2 + 1)
+        }
+    }
+    // Workout 3 Day 2
+    let day2Name3 = e =>{
+        setWorkoutDay2Name3(e.target.value)
+    }
+    function day2Reps3Down(){
+        if(workoutDay2Reps3 > 1){
+            setWorkoutDay2Reps3(workoutDay2Reps3 - 1)
+        }
+    }
+    function day2Reps3Up(){
+        if(workoutDay2Reps3 < 30){
+            setWorkoutDay2Reps3(workoutDay2Reps3 + 1)
+        }
+    }
+    function day2Sets3Down(){
+        if(workoutDay2Sets3 >1){
+            setWorkoutDay2Sets3(workoutDay2Sets3 - 1)
+        }
+    }
+    function day2Sets3Up(){
+        if(workoutDay2Sets3 < 10){
+            setWorkoutDay2Sets3(workoutDay2Sets3 + 1)
+        }
+    }
+    // Workout 4 Day 2
+    let day2Name4 = e =>{
+        setWorkoutDay2Name4(e.target.value)
+    }
+    function day2Reps4Down(){
+        if(workoutDay2Reps4 > 1){
+            setWorkoutDay2Reps4(workoutDay2Reps4 - 1)
+        }
+    }
+    function day2Reps4Up(){
+        if(workoutDay2Reps4 < 30){
+            setWorkoutDay2Reps4(workoutDay2Reps4 + 1)
+        }
+    }
+    function day2Sets4Down(){
+        if(workoutDay2Sets4 >1){
+            setWorkoutDay2Sets4(workoutDay2Sets4 - 1)
+        }
+    }
+    function day2Sets4Up(){
+        if(workoutDay2Sets4 < 10){
+            setWorkoutDay2Sets4(workoutDay2Sets4 + 1)
+        }
+    }
+    // Workout 5 Day 2
+    let day2Name5 = e =>{
+        setWorkoutDay2Name5(e.target.value)
+    }
+    function day2Reps5Down(){
+        if(workoutDay2Reps5 > 1){
+            setWorkoutDay2Reps5(workoutDay2Reps5 - 1)
+        }
+    }
+    function day2Reps5Up(){
+        if(workoutDay2Reps5 < 30){
+            setWorkoutDay2Reps5(workoutDay2Reps5 + 1)
+        }
+    }
+    function day2Sets5Down(){
+        if(workoutDay2Sets5 >1){
+            setWorkoutDay2Sets5(workoutDay2Sets5 - 1)
+        }
+    }
+    function day2Sets5Up(){
+        if(workoutDay2Sets5 < 10){
+            setWorkoutDay2Sets5(workoutDay2Sets5 + 1)
+        }
+    }
+    // 
+    // Workout 1 Day 3
+    // 
+    let day3Name1 = e =>{
+        setWorkoutDay3Name1(e.target.value)
+    }
+    function day3Reps1Down(){
+        if(workoutDay3Reps1 > 1){
+            setWorkoutDay3Reps1(workoutDay3Reps1 - 1)
+        }
+    }
+    function day3Reps1Up(){
+        if(workoutDay3Reps1 < 30){
+            setWorkoutDay3Reps1(workoutDay3Reps1 + 1)
+        }
+    }
+    function day3Sets1Down(){
+        if(workoutDay3Sets1 >1){
+            setWorkoutDay3Sets1(workoutDay3Sets1 - 1)
+        }
+    }
+    function day3Sets1Up(){
+        if(workoutDay3Sets1 < 10){
+            setWorkoutDay3Sets1(workoutDay3Sets1 + 1)
+        }
+    }
+    // Workout 2 Day 3
+    let day3Name2 = e =>{
+        setWorkoutDay3Name2(e.target.value)
+    }
+    function day3Reps2Down(){
+        if(workoutDay3Reps2 > 1){
+            setWorkoutDay3Reps2(workoutDay3Reps2 - 1)
+        }
+    }
+    function day3Reps2Up(){
+        if(workoutDay3Reps2 < 30){
+            setWorkoutDay3Reps2(workoutDay3Reps2 + 1)
+        }
+    }
+    function day3Sets2Down(){
+        if(workoutDay2Sets2 >1){
+            setWorkoutDay3Sets2(workoutDay3Sets2 - 1)
+        }
+    }
+    function day3Sets2Up(){
+        if(workoutDay3Sets2 < 10){
+            setWorkoutDay3Sets2(workoutDay3Sets2 + 1)
+        }
+    }
+    // Workout 3 Day 3
+    let day3Name3 = e =>{
+        setWorkoutDay3Name3(e.target.value)
+    }
+    function day3Reps3Down(){
+        if(workoutDay3Reps3 > 1){
+            setWorkoutDay3Reps3(workoutDay3Reps3 - 1)
+        }
+    }
+    function day3Reps3Up(){
+        if(workoutDay3Reps3 < 30){
+            setWorkoutDay3Reps3(workoutDay3Reps3 + 1)
+        }
+    }
+    function day3Sets3Down(){
+        if(workoutDay3Sets3 >1){
+            setWorkoutDay3Sets3(workoutDay3Sets3 - 1)
+        }
+    }
+    function day3Sets3Up(){
+        if(workoutDay3Sets3 < 10){
+            setWorkoutDay3Sets3(workoutDay3Sets3 + 1)
+        }
+    }
+    // Workout 4 Day 3
+    let day3Name4 = e =>{
+        setWorkoutDay3Name4(e.target.value)
+    }
+    function day3Reps4Down(){
+        if(workoutDay3Reps4 > 1){
+            setWorkoutDay3Reps4(workoutDay3Reps4 - 1)
+        }
+    }
+    function day3Reps4Up(){
+        if(workoutDay3Reps4 < 30){
+            setWorkoutDay3Reps4(workoutDay3Reps4 + 1)
+        }
+    }
+    function day3Sets4Down(){
+        if(workoutDay3Sets4 >1){
+            setWorkoutDay3Sets4(workoutDay3Sets4 - 1)
+        }
+    }
+    function day3Sets4Up(){
+        if(workoutDay3Sets4 < 10){
+            setWorkoutDay3Sets4(workoutDay3Sets4 + 1)
+        }
+    }
+    // Workout 5 Day 2
+    let day3Name5 = e =>{
+        setWorkoutDay3Name5(e.target.value)
+    }
+    function day3Reps5Down(){
+        if(workoutDay3Reps5 > 1){
+            setWorkoutDay3Reps5(workoutDay3Reps5 - 1)
+        }
+    }
+    function day3Reps5Up(){
+        if(workoutDay3Reps5 < 30){
+            setWorkoutDay3Reps5(workoutDay3Reps5 + 1)
+        }
+    }
+    function day3Sets5Down(){
+        if(workoutDay3Sets5 >1){
+            setWorkoutDay3Sets5(workoutDay3Sets5 - 1)
+        }
+    }
+    function day3Sets5Up(){
+        if(workoutDay3Sets5 < 10){
+            setWorkoutDay3Sets5(workoutDay3Sets5 + 1)
+        }
+    }
     
 
     return(
@@ -152,7 +457,7 @@ function Workouts(props){
             <h1>Workouts</h1>
             <p>Username:{props.reduxState.username}</p>
             <div className='workoutHolder'>
-                <h2>Day 1:</h2>
+                <h2 className='day'>Day 1:</h2>
                 <div>
                     <div>
                         {workoutDay1Name1 === '' ? (
@@ -285,6 +590,144 @@ function Workouts(props){
                         <div>
                             <Button onClick={() => day1Sets5Down()}>{'<<<'}</Button>
                             <Button onClick={() => day1Sets5Up()}>{'>>>'}</Button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className='workoutHolder'>
+                <h2 className='day'>Day 2:</h2>
+                <div>
+                    <div>
+                        {workoutDay2Name1 === '' ? (
+                            <h3>Workout 1:</h3>
+                        ):(
+                            <h3>{workoutDay2Name1}</h3>
+                        )}
+                    <input
+                        type='text' 
+                        maxLength={30} 
+                        onChange={day2Name1}/>
+                    </div>
+                    <div>
+                        <p>Reps:{workoutDay2Reps1}</p>
+                        <div>
+                            <Button onClick={() => day2Reps1Down()}>{'<<<'}</Button>
+                            <Button onClick={() => day2Reps1Up()}>{'>>>'}</Button>
+                        </div>
+                    </div>
+                    <div>
+                        <p>Sets:{workoutDay2Sets1}</p>
+                        <div>
+                            <Button onClick={() => day2Sets1Down()}>{'<<<'}</Button>
+                            <Button onClick={() => day2Sets1Up()}>{'>>>'}</Button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        {workoutDay2Name2 === '' ? (
+                            <h3>Workout 2:</h3>
+                        ):(
+                            <h3>{workoutDay2Name2}</h3>
+                        )}
+                    <input
+                        type='text' 
+                        maxLength={30} 
+                        onChange={day2Name2}/>
+                    </div>
+                    <div>
+                        <p>Reps:{workoutDay2Reps2}</p>
+                        <div>
+                            <Button onClick={() => day2Reps2Down()}>{'<<<'}</Button>
+                            <Button onClick={() => day2Reps2Up()}>{'>>>'}</Button>
+                        </div>
+                    </div>
+                    <div>
+                        <p>Sets:{workoutDay2Sets2}</p>
+                        <div>
+                            <Button onClick={() => day2Sets2Down()}>{'<<<'}</Button>
+                            <Button onClick={() => day2Sets2Up()}>{'>>>'}</Button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        {workoutDay2Name3 === '' ? (
+                            <h3>Workout 3:</h3>
+                        ):(
+                            <h3>{workoutDay2Name3}</h3>
+                        )}
+                    <input
+                        type='text' 
+                        maxLength={30} 
+                        onChange={day2Name3}/>
+                    </div>
+                    <div>
+                        <p>Reps:{workoutDay2Reps3}</p>
+                        <div>
+                            <Button onClick={() => day2Reps3Down()}>{'<<<'}</Button>
+                            <Button onClick={() => day2Reps3Up()}>{'>>>'}</Button>
+                        </div>
+                    </div>
+                    <div>
+                        <p>Sets:{workoutDay2Sets3}</p>
+                        <div>
+                            <Button onClick={() => day2Sets3Down()}>{'<<<'}</Button>
+                            <Button onClick={() => day2Sets3Up()}>{'>>>'}</Button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        {workoutDay2Name4 === '' ? (
+                            <h3>Workout 4:</h3>
+                        ):(
+                            <h3>{workoutDay2Name4}</h3>
+                        )}
+                    <input
+                        type='text' 
+                        maxLength={30} 
+                        onChange={day2Name4}/>
+                    </div>
+                    <div>
+                        <p>Reps:{workoutDay2Reps4}</p>
+                        <div>
+                            <Button onClick={() => day2Reps4Down()}>{'<<<'}</Button>
+                            <Button onClick={() => day2Reps4Up()}>{'>>>'}</Button>
+                        </div>
+                    </div>
+                    <div>
+                        <p>Sets:{workoutDay2Sets4}</p>
+                        <div>
+                            <Button onClick={() => day2Sets4Down()}>{'<<<'}</Button>
+                            <Button onClick={() => day2Sets4Up()}>{'>>>'}</Button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        {workoutDay2Name5 === '' ? (
+                            <h3>Workout 5:</h3>
+                        ):(
+                            <h3>{workoutDay2Name5}</h3>
+                        )}
+                    <input
+                        type='text' 
+                        maxLength={30} 
+                        onChange={day2Name5}/>
+                    </div>
+                    <div>
+                        <p>Reps:{workoutDay2Reps5}</p>
+                        <div>
+                            <Button onClick={() => day2Reps5Down()}>{'<<<'}</Button>
+                            <Button onClick={() => day2Reps5Up()}>{'>>>'}</Button>
+                        </div>
+                    </div>
+                    <div>
+                        <p>Sets:{workoutDay2Sets5}</p>
+                        <div>
+                            <Button onClick={() => day2Sets5Down()}>{'<<<'}</Button>
+                            <Button onClick={() => day2Sets5Up()}>{'>>>'}</Button>
                         </div>
                     </div>
                 </div>
