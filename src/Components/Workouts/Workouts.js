@@ -369,7 +369,7 @@ function Workouts(props){
         }
     }
     function day3Sets2Down(){
-        if(workoutDay2Sets2 >1){
+        if(workoutDay3Sets2 >1){
             setWorkoutDay3Sets2(workoutDay3Sets2 - 1)
         }
     }
@@ -426,7 +426,7 @@ function Workouts(props){
             setWorkoutDay3Sets4(workoutDay3Sets4 + 1)
         }
     }
-    // Workout 5 Day 2
+    // Workout 5 Day 3
     let day3Name5 = e =>{
         setWorkoutDay3Name5(e.target.value)
     }
@@ -448,6 +448,250 @@ function Workouts(props){
     function day3Sets5Up(){
         if(workoutDay3Sets5 < 10){
             setWorkoutDay3Sets5(workoutDay3Sets5 + 1)
+        }
+    }
+    // 
+    // Workout 1 Day 4
+    // 
+    let day4Name1 = e =>{
+        setWorkoutDay4Name1(e.target.value)
+    }
+    function day4Reps1Down(){
+        if(workoutDay4Reps1 > 1){
+            setWorkoutDay4Reps1(workoutDay4Reps1 - 1)
+        }
+    }
+    function day4Reps1Up(){
+        if(workoutDay4Reps1 < 30){
+            setWorkoutDay4Reps1(workoutDay4Reps1 + 1)
+        }
+    }
+    function day4Sets1Down(){
+        if(workoutDay4Sets1 >1){
+            setWorkoutDay4Sets1(workoutDay4Sets1 - 1)
+        }
+    }
+    function day4Sets1Up(){
+        if(workoutDay4Sets1 < 10){
+            setWorkoutDay4Sets1(workoutDay4Sets1 + 1)
+        }
+    }
+    // Workout 2 Day 4
+    let day4Name2 = e =>{
+        setWorkoutDay4Name2(e.target.value)
+    }
+    function day4Reps2Down(){
+        if(workoutDay4Reps2 > 1){
+            setWorkoutDay4Reps2(workoutDay4Reps2 - 1)
+        }
+    }
+    function day4Reps2Up(){
+        if(workoutDay4Reps2 < 30){
+            setWorkoutDay4Reps2(workoutDay4Reps2 + 1)
+        }
+    }
+    function day4Sets2Down(){
+        if(workoutDay4Sets2 >1){
+            setWorkoutDay4Sets2(workoutDay4Sets2 - 1)
+        }
+    }
+    function day4Sets2Up(){
+        if(workoutDay4Sets2 < 10){
+            setWorkoutDay4Sets2(workoutDay4Sets2 + 1)
+        }
+    }
+    // Workout 3 Day 4
+    let day4Name3 = e =>{
+        setWorkoutDay4Name3(e.target.value)
+    }
+    function day4Reps3Down(){
+        if(workoutDay4Reps3 > 1){
+            setWorkoutDay4Reps3(workoutDay4Reps3 - 1)
+        }
+    }
+    function day4Reps3Up(){
+        if(workoutDay4Reps3 < 30){
+            setWorkoutDay4Reps3(workoutDay4Reps3 + 1)
+        }
+    }
+    function day4Sets3Down(){
+        if(workoutDay4Sets3 >1){
+            setWorkoutDay4Sets3(workoutDay4Sets3 - 1)
+        }
+    }
+    function day4Sets3Up(){
+        if(workoutDay4Sets3 < 10){
+            setWorkoutDay4Sets3(workoutDay4Sets3 + 1)
+        }
+    }
+    // Workout 4 Day 4
+    let day4Name4 = e =>{
+        setWorkoutDay4Name4(e.target.value)
+    }
+    function day4Reps4Down(){
+        if(workoutDay4Reps4 > 1){
+            setWorkoutDay4Reps4(workoutDay4Reps4 - 1)
+        }
+    }
+    function day4Reps4Up(){
+        if(workoutDay4Reps4 < 30){
+            setWorkoutDay4Reps4(workoutDay4Reps4 + 1)
+        }
+    }
+    function day4Sets4Down(){
+        if(workoutDay4Sets4 >1){
+            setWorkoutDay4Sets4(workoutDay4Sets4 - 1)
+        }
+    }
+    function day4Sets4Up(){
+        if(workoutDay4Sets4 < 10){
+            setWorkoutDay4Sets4(workoutDay4Sets4 + 1)
+        }
+    }
+    // Workout 5 Day 4
+    let day4Name5 = e =>{
+        setWorkoutDay4Name5(e.target.value)
+    }
+    function day4Reps5Down(){
+        if(workoutDay4Reps5 > 1){
+            setWorkoutDay4Reps5(workoutDay4Reps5 - 1)
+        }
+    }
+    function day4Reps5Up(){
+        if(workoutDay4Reps5 < 30){
+            setWorkoutDay4Reps5(workoutDay4Reps5 + 1)
+        }
+    }
+    function day4Sets5Down(){
+        if(workoutDay4Sets5 >1){
+            setWorkoutDay4Sets5(workoutDay4Sets5 - 1)
+        }
+    }
+    function day4Sets5Up(){
+        if(workoutDay4Sets5 < 10){
+            setWorkoutDay4Sets5(workoutDay4Sets5 + 1)
+        }
+    }
+    // 
+    // Workout 1 Day 5
+    // 
+    let day5Name1 = e =>{
+        setWorkoutDay5Name1(e.target.value)
+    }
+    function day5Reps1Down(){
+        if(workoutDay5Reps1 > 1){
+            setWorkoutDay5Reps1(workoutDay5Reps1 - 1)
+        }
+    }
+    function day5Reps1Up(){
+        if(workoutDay5Reps1 < 30){
+            setWorkoutDay5Reps1(workoutDay5Reps1 + 1)
+        }
+    }
+    function day5Sets1Down(){
+        if(workoutDay5Sets1 >1){
+            setWorkoutDay5Sets1(workoutDay5Sets1 - 1)
+        }
+    }
+    function day5Sets1Up(){
+        if(workoutDay5Sets1 < 10){
+            setWorkoutDay5Sets1(workoutDay5Sets1 + 1)
+        }
+    }
+    // Workout 2 Day 5
+    let day5Name2 = e =>{
+        setWorkoutDay5Name2(e.target.value)
+    }
+    function day5Reps2Down(){
+        if(workoutDay5Reps2 > 1){
+            setWorkoutDay5Reps2(workoutDay5Reps2 - 1)
+        }
+    }
+    function day5Reps2Up(){
+        if(workoutDay5Reps2 < 30){
+            setWorkoutDay5Reps2(workoutDay5Reps2 + 1)
+        }
+    }
+    function day5Sets2Down(){
+        if(workoutDay5Sets2 >1){
+            setWorkoutDay5Sets2(workoutDay5Sets2 - 1)
+        }
+    }
+    function day5Sets2Up(){
+        if(workoutDay5Sets2 < 10){
+            setWorkoutDay5Sets2(workoutDay5Sets2 + 1)
+        }
+    }
+    // Workout 3 Day 5
+    let day5Name3 = e =>{
+        setWorkoutDay5Name3(e.target.value)
+    }
+    function day5Reps3Down(){
+        if(workoutDay5Reps3 > 1){
+            setWorkoutDay5Reps3(workoutDay5Reps3 - 1)
+        }
+    }
+    function day5Reps3Up(){
+        if(workoutDay5Reps3 < 30){
+            setWorkoutDay5Reps3(workoutDay5Reps3 + 1)
+        }
+    }
+    function day5Sets3Down(){
+        if(workoutDay5Sets3 >1){
+            setWorkoutDay5Sets3(workoutDay5Sets3 - 1)
+        }
+    }
+    function day5Sets3Up(){
+        if(workoutDay5Sets3 < 10){
+            setWorkoutDay5Sets3(workoutDay5Sets3 + 1)
+        }
+    }
+    // Workout 4 Day 5
+    let day5Name4 = e =>{
+        setWorkoutDay5Name4(e.target.value)
+    }
+    function day5Reps4Down(){
+        if(workoutDay5Reps4 > 1){
+            setWorkoutDay5Reps4(workoutDay5Reps4 - 1)
+        }
+    }
+    function day5Reps4Up(){
+        if(workoutDay5Reps4 < 30){
+            setWorkoutDay5Reps4(workoutDay5Reps4 + 1)
+        }
+    }
+    function day5Sets4Down(){
+        if(workoutDay5Sets4 >1){
+            setWorkoutDay5Sets4(workoutDay5Sets4 - 1)
+        }
+    }
+    function day5Sets4Up(){
+        if(workoutDay5Sets4 < 10){
+            setWorkoutDay5Sets4(workoutDay5Sets4 + 1)
+        }
+    }
+    // Workout 5 Day 5
+    let day5Name5 = e =>{
+        setWorkoutDay5Name5(e.target.value)
+    }
+    function day5Reps5Down(){
+        if(workoutDay5Reps5 > 1){
+            setWorkoutDay5Reps5(workoutDay5Reps5 - 1)
+        }
+    }
+    function day5Reps5Up(){
+        if(workoutDay5Reps5 < 30){
+            setWorkoutDay5Reps5(workoutDay5Reps5 + 1)
+        }
+    }
+    function day5Sets5Down(){
+        if(workoutDay5Sets5 >1){
+            setWorkoutDay5Sets5(workoutDay5Sets5 - 1)
+        }
+    }
+    function day5Sets5Up(){
+        if(workoutDay5Sets5 < 10){
+            setWorkoutDay5Sets5(workoutDay5Sets5 + 1)
         }
     }
     
@@ -732,7 +976,6 @@ function Workouts(props){
                     </div>
                 </div>
             </div>
-
         </div>
     )
 }
