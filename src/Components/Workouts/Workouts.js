@@ -7,6 +7,33 @@ import {makeStyles} from '@material-ui/core/styles'
 import './Workouts.css'
 
 const styles = makeStyles({
+    downButton:{
+        border:'0.5px solid black',
+        backgroundColor:'#dd2c00',
+        '&:hover':{
+            backgroundColor:'#bf360c'
+        } 
+    },
+    upButton:{
+        position:'relative',
+        right:'-25px',
+        border:'0.5px solid black',
+        backgroundColor:'#dd2c00',
+        '&:hover':{
+            backgroundColor:'#bf360c'
+        } 
+    },
+    confirmButton:{
+        width:'100%',
+        marginTop:'10px',
+        backgroundColor:'#dd2c00',
+        borderRadius:'0px',
+        borderTop:'1px solid black',
+        borderBottom:'1px solid black',
+        '&:hover':{
+            backgroundColor:'#bf360c'
+        } 
+    }
 
 })
 
@@ -726,17 +753,18 @@ function Workouts(props){
                     <div>
                         <p className='text'>Reps:{workoutDay1Reps1}</p>
                         <div className='buttonHolder'>
-                            <Button onClick={() => day1Reps1Down()}>{'<<<'}</Button>
-                            <Button onClick={() => day1Reps1Up()}>{'>>>'}</Button>
+                            <Button onClick={() => day1Reps1Down()} className={style.downButton}>{'<<<'}</Button>
+                            <Button onClick={() => day1Reps1Up()} className={style.upButton}>{'>>>'}</Button>
                         </div>
                     </div>
                     <div>
                         <p className='text'>Sets:{workoutDay1Sets1}</p>
                         <div className='buttonHolder'>
-                            <Button onClick={() => day1Sets1Down()}>{'<<<'}</Button>
-                            <Button onClick={() => day1Sets1Up()}>{'>>>'}</Button>
+                            <Button onClick={() => day1Sets1Down()} className={style.downButton}>{'<<<'}</Button>
+                            <Button onClick={() => day1Sets1Up()} className={style.upButton}>{'>>>'}</Button>
                         </div>
                     </div>
+                    <Button className={style.confirmButton}>Submit</Button>
                 </div>
                 <div className='workout'>
                     <div>
@@ -754,15 +782,15 @@ function Workouts(props){
                     <div>
                         <p className='text'>Reps:{workoutDay1Reps2}</p>
                         <div className='buttonHolder'>
-                            <Button onClick={() => day1Reps2Down()}>{'<<<'}</Button>
-                            <Button onClick={() => day1Reps2Up()}>{'>>>'}</Button>
+                            <Button onClick={() => day1Reps2Down()} className={style.downButton}>{'<<<'}</Button>
+                            <Button onClick={() => day1Reps2Up()} className={style.upButton}>{'>>>'}</Button>
                         </div>
                     </div>
                     <div>
                         <p className='text'>Sets:{workoutDay1Sets2}</p>
                         <div className='buttonHolder'>
-                            <Button onClick={() => day1Sets2Down()}>{'<<<'}</Button>
-                            <Button onClick={() => day1Sets2Up()}>{'>>>'}</Button>
+                            <Button onClick={() => day1Sets2Down()} className={style.downButton}>{'<<<'}</Button>
+                            <Button onClick={() => day1Sets2Up()} className={style.upButton}>{'>>>'}</Button>
                         </div>
                     </div>
                 </div>
@@ -782,15 +810,15 @@ function Workouts(props){
                     <div>
                         <p className='text'>Reps:{workoutDay1Reps3}</p>
                         <div className='buttonHolder'>
-                            <Button onClick={() => day1Reps3Down()}>{'<<<'}</Button>
-                            <Button onClick={() => day1Reps3Up()}>{'>>>'}</Button>
+                            <Button onClick={() => day1Reps3Down()} className={style.downButton}>{'<<<'}</Button>
+                            <Button onClick={() => day1Reps3Up()} className={style.upButton}>{'>>>'}</Button>
                         </div>
                     </div>
                     <div>
                         <p className='text'>Sets:{workoutDay1Sets3}</p>
                         <div className='buttonHolder'>
-                            <Button onClick={() => day1Sets3Down()}>{'<<<'}</Button>
-                            <Button onClick={() => day1Sets3Up()}>{'>>>'}</Button>
+                            <Button onClick={() => day1Sets3Down()} className={style.downButton}>{'<<<'}</Button>
+                            <Button onClick={() => day1Sets3Up()} className={style.upButton}>{'>>>'}</Button>
                         </div>
                     </div>
                 </div>
@@ -810,15 +838,15 @@ function Workouts(props){
                     <div>
                         <p className='text'>Reps:{workoutDay1Reps4}</p>
                         <div className='buttonHolder'>
-                            <Button onClick={() => day1Reps4Down()}>{'<<<'}</Button>
-                            <Button onClick={() => day1Reps4Up()}>{'>>>'}</Button>
+                            <Button onClick={() => day1Reps4Down()} className={style.downButton}>{'<<<'}</Button>
+                            <Button onClick={() => day1Reps4Up()} className={style.upButton}>{'>>>'}</Button>
                         </div>
                     </div>
                     <div>
                         <p className='text'>Sets:{workoutDay1Sets4}</p>
                         <div className='buttonHolder'>
-                            <Button onClick={() => day1Sets4Down()}>{'<<<'}</Button>
-                            <Button onClick={() => day1Sets4Up()}>{'>>>'}</Button>
+                            <Button onClick={() => day1Sets4Down()} className={style.downButton}>{'<<<'}</Button>
+                            <Button onClick={() => day1Sets4Up()} className={style.upButton}>{'>>>'}</Button>
                         </div>
                     </div>
                 </div>
@@ -838,15 +866,15 @@ function Workouts(props){
                     <div>
                         <p className='text'>Reps:{workoutDay1Reps5}</p>
                         <div className='buttonHolder'>
-                            <Button onClick={() => day1Reps5Down()}>{'<<<'}</Button>
-                            <Button onClick={() => day1Reps5Up()}>{'>>>'}</Button>
+                            <Button onClick={() => day1Reps5Down()} className={style.downButton}>{'<<<'}</Button>
+                            <Button onClick={() => day1Reps5Up()} className={style.upButton}>{'>>>'}</Button>
                         </div>
                     </div>
                     <div>
                         <p className='text'>Sets:{workoutDay1Sets5}</p>
                         <div className='buttonHolder'>
-                            <Button onClick={() => day1Sets5Down()}>{'<<<'}</Button>
-                            <Button onClick={() => day1Sets5Up()}>{'>>>'}</Button>
+                            <Button onClick={() => day1Sets5Down()} className={style.downButton}>{'<<<'}</Button>
+                            <Button onClick={() => day1Sets5Up()} className={style.upButton}>{'>>>'}</Button>
                         </div>
                     </div>
                 </div>
