@@ -2,9 +2,17 @@ import React, {useState, useEffect} from 'react'
 import Button from '@material-ui/core/Button'
 import {connect} from 'react-redux'
 import {getUser} from '../../ducks/authReducer'
+import {makeStyles} from '@material-ui/core/styles'
+
 import './Workouts.css'
 
+const styles = makeStyles({
+
+})
+
+
 function Workouts(props){
+    const style = styles();
     // Day 1 vars
     const [workoutDay1Name1,setWorkoutDay1Name1] = useState('')
     const [workoutDay1Reps1,setWorkoutDay1Reps1] = useState(1)
@@ -700,282 +708,150 @@ function Workouts(props){
         <div>
             <h1>Workouts</h1>
             <p>Username:{props.reduxState.username}</p>
+            <h2 className='day'>Day 1:</h2>
             <div className='workoutHolder'>
-                <h2 className='day'>Day 1:</h2>
-                <div>
+                <div className='workout'>
                     <div>
                         {workoutDay1Name1 === '' ? (
-                            <h3>Workout 1:</h3>
+                            <h3 className='text'>Workout 1:</h3>
                         ):(
-                            <h3>{workoutDay1Name1}</h3>
+                            <h3 className='text'>{workoutDay1Name1}</h3>
                         )}
-                    <input
+                    <input 
+                        placeholder='Change Name:'
                         type='text' 
                         maxLength={30} 
                         onChange={day1Name1}/>
                     </div>
                     <div>
-                        <p>Reps:{workoutDay1Reps1}</p>
-                        <div>
+                        <p className='text'>Reps:{workoutDay1Reps1}</p>
+                        <div className='buttonHolder'>
                             <Button onClick={() => day1Reps1Down()}>{'<<<'}</Button>
                             <Button onClick={() => day1Reps1Up()}>{'>>>'}</Button>
                         </div>
                     </div>
                     <div>
-                        <p>Sets:{workoutDay1Sets1}</p>
-                        <div>
+                        <p className='text'>Sets:{workoutDay1Sets1}</p>
+                        <div className='buttonHolder'>
                             <Button onClick={() => day1Sets1Down()}>{'<<<'}</Button>
                             <Button onClick={() => day1Sets1Up()}>{'>>>'}</Button>
                         </div>
                     </div>
                 </div>
-                <div>
+                <div className='workout'>
                     <div>
                         {workoutDay1Name2 === '' ? (
-                            <h3>Workout 2:</h3>
+                            <h3 className='text'>Workout 2:</h3>
                         ):(
-                            <h3>{workoutDay1Name2}</h3>
+                            <h3 className='text'>{workoutDay1Name2}</h3>
                         )}
                     <input
+                        placeholder='Change Name:'
                         type='text' 
                         maxLength={30} 
                         onChange={day1Name2}/>
                     </div>
                     <div>
-                        <p>Reps:{workoutDay1Reps2}</p>
-                        <div>
+                        <p className='text'>Reps:{workoutDay1Reps2}</p>
+                        <div className='buttonHolder'>
                             <Button onClick={() => day1Reps2Down()}>{'<<<'}</Button>
                             <Button onClick={() => day1Reps2Up()}>{'>>>'}</Button>
                         </div>
                     </div>
                     <div>
-                        <p>Sets:{workoutDay1Sets2}</p>
-                        <div>
+                        <p className='text'>Sets:{workoutDay1Sets2}</p>
+                        <div className='buttonHolder'>
                             <Button onClick={() => day1Sets2Down()}>{'<<<'}</Button>
                             <Button onClick={() => day1Sets2Up()}>{'>>>'}</Button>
                         </div>
                     </div>
                 </div>
-                <div>
+                <div className='workout'>
                     <div>
                         {workoutDay1Name3 === '' ? (
-                            <h3>Workout 3:</h3>
+                            <h3 className='text'>Workout 3:</h3>
                         ):(
-                            <h3>{workoutDay1Name3}</h3>
+                            <h3 className='text'>{workoutDay1Name3}</h3>
                         )}
-                    <input
+                    <input 
+                        placeholder='Change Name:'
                         type='text' 
                         maxLength={30} 
                         onChange={day1Name3}/>
                     </div>
                     <div>
-                        <p>Reps:{workoutDay1Reps3}</p>
-                        <div>
+                        <p className='text'>Reps:{workoutDay1Reps3}</p>
+                        <div className='buttonHolder'>
                             <Button onClick={() => day1Reps3Down()}>{'<<<'}</Button>
                             <Button onClick={() => day1Reps3Up()}>{'>>>'}</Button>
                         </div>
                     </div>
                     <div>
-                        <p>Sets:{workoutDay1Sets3}</p>
-                        <div>
+                        <p className='text'>Sets:{workoutDay1Sets3}</p>
+                        <div className='buttonHolder'>
                             <Button onClick={() => day1Sets3Down()}>{'<<<'}</Button>
                             <Button onClick={() => day1Sets3Up()}>{'>>>'}</Button>
                         </div>
                     </div>
                 </div>
-                <div>
+                <div className='workout'>
                     <div>
                         {workoutDay1Name4 === '' ? (
-                            <h3>Workout 4:</h3>
+                            <h3 className='text'>Workout 4:</h3>
                         ):(
-                            <h3>{workoutDay1Name4}</h3>
+                            <h3 className='text'>{workoutDay1Name4}</h3>
                         )}
                     <input
+                        placeholder='Change Name:'
                         type='text' 
                         maxLength={30} 
                         onChange={day1Name4}/>
                     </div>
                     <div>
-                        <p>Reps:{workoutDay1Reps4}</p>
-                        <div>
+                        <p className='text'>Reps:{workoutDay1Reps4}</p>
+                        <div className='buttonHolder'>
                             <Button onClick={() => day1Reps4Down()}>{'<<<'}</Button>
                             <Button onClick={() => day1Reps4Up()}>{'>>>'}</Button>
                         </div>
                     </div>
                     <div>
-                        <p>Sets:{workoutDay1Sets4}</p>
-                        <div>
+                        <p className='text'>Sets:{workoutDay1Sets4}</p>
+                        <div className='buttonHolder'>
                             <Button onClick={() => day1Sets4Down()}>{'<<<'}</Button>
                             <Button onClick={() => day1Sets4Up()}>{'>>>'}</Button>
                         </div>
                     </div>
                 </div>
-                <div>
+                <div className='workout'>
                     <div>
                         {workoutDay1Name5 === '' ? (
-                            <h3>Workout 5:</h3>
+                            <h3 className='text'>Workout 5:</h3>
                         ):(
-                            <h3>{workoutDay1Name5}</h3>
+                            <h3 className='text'>{workoutDay1Name5}</h3>
                         )}
-                    <input
+                    <input 
+                        placeholder='Change Name:'
                         type='text' 
                         maxLength={30} 
                         onChange={day1Name5}/>
                     </div>
                     <div>
-                        <p>Reps:{workoutDay1Reps5}</p>
-                        <div>
+                        <p className='text'>Reps:{workoutDay1Reps5}</p>
+                        <div className='buttonHolder'>
                             <Button onClick={() => day1Reps5Down()}>{'<<<'}</Button>
                             <Button onClick={() => day1Reps5Up()}>{'>>>'}</Button>
                         </div>
                     </div>
                     <div>
-                        <p>Sets:{workoutDay1Sets5}</p>
-                        <div>
+                        <p className='text'>Sets:{workoutDay1Sets5}</p>
+                        <div className='buttonHolder'>
                             <Button onClick={() => day1Sets5Down()}>{'<<<'}</Button>
                             <Button onClick={() => day1Sets5Up()}>{'>>>'}</Button>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className='workoutHolder'>
-                <h2 className='day'>Day 2:</h2>
-                <div>
-                    <div>
-                        {workoutDay2Name1 === '' ? (
-                            <h3>Workout 1:</h3>
-                        ):(
-                            <h3>{workoutDay2Name1}</h3>
-                        )}
-                    <input
-                        type='text' 
-                        maxLength={30} 
-                        onChange={day2Name1}/>
-                    </div>
-                    <div>
-                        <p>Reps:{workoutDay2Reps1}</p>
-                        <div>
-                            <Button onClick={() => day2Reps1Down()}>{'<<<'}</Button>
-                            <Button onClick={() => day2Reps1Up()}>{'>>>'}</Button>
-                        </div>
-                    </div>
-                    <div>
-                        <p>Sets:{workoutDay2Sets1}</p>
-                        <div>
-                            <Button onClick={() => day2Sets1Down()}>{'<<<'}</Button>
-                            <Button onClick={() => day2Sets1Up()}>{'>>>'}</Button>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        {workoutDay2Name2 === '' ? (
-                            <h3>Workout 2:</h3>
-                        ):(
-                            <h3>{workoutDay2Name2}</h3>
-                        )}
-                    <input
-                        type='text' 
-                        maxLength={30} 
-                        onChange={day2Name2}/>
-                    </div>
-                    <div>
-                        <p>Reps:{workoutDay2Reps2}</p>
-                        <div>
-                            <Button onClick={() => day2Reps2Down()}>{'<<<'}</Button>
-                            <Button onClick={() => day2Reps2Up()}>{'>>>'}</Button>
-                        </div>
-                    </div>
-                    <div>
-                        <p>Sets:{workoutDay2Sets2}</p>
-                        <div>
-                            <Button onClick={() => day2Sets2Down()}>{'<<<'}</Button>
-                            <Button onClick={() => day2Sets2Up()}>{'>>>'}</Button>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        {workoutDay2Name3 === '' ? (
-                            <h3>Workout 3:</h3>
-                        ):(
-                            <h3>{workoutDay2Name3}</h3>
-                        )}
-                    <input
-                        type='text' 
-                        maxLength={30} 
-                        onChange={day2Name3}/>
-                    </div>
-                    <div>
-                        <p>Reps:{workoutDay2Reps3}</p>
-                        <div>
-                            <Button onClick={() => day2Reps3Down()}>{'<<<'}</Button>
-                            <Button onClick={() => day2Reps3Up()}>{'>>>'}</Button>
-                        </div>
-                    </div>
-                    <div>
-                        <p>Sets:{workoutDay2Sets3}</p>
-                        <div>
-                            <Button onClick={() => day2Sets3Down()}>{'<<<'}</Button>
-                            <Button onClick={() => day2Sets3Up()}>{'>>>'}</Button>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        {workoutDay2Name4 === '' ? (
-                            <h3>Workout 4:</h3>
-                        ):(
-                            <h3>{workoutDay2Name4}</h3>
-                        )}
-                    <input
-                        type='text' 
-                        maxLength={30} 
-                        onChange={day2Name4}/>
-                    </div>
-                    <div>
-                        <p>Reps:{workoutDay2Reps4}</p>
-                        <div>
-                            <Button onClick={() => day2Reps4Down()}>{'<<<'}</Button>
-                            <Button onClick={() => day2Reps4Up()}>{'>>>'}</Button>
-                        </div>
-                    </div>
-                    <div>
-                        <p>Sets:{workoutDay2Sets4}</p>
-                        <div>
-                            <Button onClick={() => day2Sets4Down()}>{'<<<'}</Button>
-                            <Button onClick={() => day2Sets4Up()}>{'>>>'}</Button>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        {workoutDay2Name5 === '' ? (
-                            <h3>Workout 5:</h3>
-                        ):(
-                            <h3>{workoutDay2Name5}</h3>
-                        )}
-                    <input
-                        type='text' 
-                        maxLength={30} 
-                        onChange={day2Name5}/>
-                    </div>
-                    <div>
-                        <p>Reps:{workoutDay2Reps5}</p>
-                        <div>
-                            <Button onClick={() => day2Reps5Down()}>{'<<<'}</Button>
-                            <Button onClick={() => day2Reps5Up()}>{'>>>'}</Button>
-                        </div>
-                    </div>
-                    <div>
-                        <p>Sets:{workoutDay2Sets5}</p>
-                        <div>
-                            <Button onClick={() => day2Sets5Down()}>{'<<<'}</Button>
-                            <Button onClick={() => day2Sets5Up()}>{'>>>'}</Button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
         </div>
     )
 }

@@ -2,9 +2,35 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  width: 100vw;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-color: salmon;
+}
+
+.workout {
+  border: 2px solid black;
+  border-bottom: 1px solid black;
+}
+
+.day {
+  width: 100vw;
+  text-align: center;
+}
+
+.text {
+  width: 100%;
+  text-align: center;
+}
+
+.buttonHolder {
+  border-top: 1px black solid;
+  border-bottom: 1px black solid;
+}
+
+.upButton {
+  position: relative;
+  right: 0px;
 }
 /*# sourceMappingURL=Workouts.css.map */
