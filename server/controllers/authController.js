@@ -33,6 +33,7 @@ module.exports={
 
         let user = await db.register({username,hash})
         session.user = user
+        db.registerWorkoutTable(username)
         res.status(200).send(session.user)
     },
     logout:(req,res) => {

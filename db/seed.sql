@@ -9,8 +9,7 @@ CREATE TABLE workout_users (
 );
 
 CREATE TABLE dayoneworkout (
-    workoutusername VARCHAR(240) REFERENCES workout_users(username),
-    weekday VARCHAR (20),
+    workoutusername VARCHAR(240),
     workout1 VARCHAR (120),
     workout1reps INT,
     workout1sets INT,
@@ -29,8 +28,7 @@ CREATE TABLE dayoneworkout (
 );
 
 CREATE TABLE daytwoworkout (
-    workoutusername VARCHAR(240) REFERENCES workout_users(username),
-    weekday VARCHAR (20),
+    workoutusername VARCHAR(240),
     workout1 VARCHAR (120),
     workout1reps INT,
     workout1sets INT,
@@ -49,8 +47,7 @@ CREATE TABLE daytwoworkout (
 );
 
 CREATE TABLE daythreeworkout (
-    workoutusername VARCHAR(240) REFERENCES workout_users(username),
-    weekday VARCHAR (20),
+    workoutusername VARCHAR(240),
     workout1 VARCHAR (120),
     workout1reps INT,
     workout1sets INT,
@@ -69,8 +66,7 @@ CREATE TABLE daythreeworkout (
 );
 
 CREATE TABLE dayfourworkout (
-    workoutusername VARCHAR(240) REFERENCES workout_users(username),
-    weekday VARCHAR (20),
+    workoutusername VARCHAR(240),
     workout1 VARCHAR (120),
     workout1reps INT,
     workout1sets INT,
@@ -89,8 +85,7 @@ CREATE TABLE dayfourworkout (
 );
 
 CREATE TABLE dayfiveworkout (
-    workoutusername VARCHAR(240) REFERENCES workout_users(username),
-    weekday VARCHAR (20),
+    workoutusername VARCHAR(240),
     workout1 VARCHAR (120),
     workout1reps INT,
     workout1sets INT,

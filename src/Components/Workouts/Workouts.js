@@ -3,6 +3,7 @@ import Button from '@material-ui/core/Button'
 import {connect} from 'react-redux'
 import {getUser} from '../../ducks/authReducer'
 import {makeStyles} from '@material-ui/core/styles'
+import Axios from 'axios'
 
 import './Workouts.css'
 
@@ -23,7 +24,7 @@ const styles = makeStyles({
             backgroundColor:'#bf360c'
         } 
     },
-    confirmButton:{
+    button:{
         width:'100%',
         marginTop:'10px',
         backgroundColor:'#dd2c00',
@@ -40,6 +41,7 @@ const styles = makeStyles({
 
 function Workouts(props){
     const style = styles();
+    const username = props.reduxState.username
     // Day 1 vars
     const [workoutDay1Name1,setWorkoutDay1Name1] = useState('')
     const [workoutDay1Reps1,setWorkoutDay1Reps1] = useState(1)
@@ -56,6 +58,11 @@ function Workouts(props){
     const [workoutDay1Name5,setWorkoutDay1Name5] = useState('')
     const [workoutDay1Reps5,setWorkoutDay1Reps5] = useState(1)
     const [workoutDay1Sets5,setWorkoutDay1Sets5] = useState(1)
+    const [workout1Day1Edit,setWorkout1Day1Edit] = useState(false)
+    const [workout2Day1Edit,setWorkout2Day1Edit] = useState(false)
+    const [workout3Day1Edit,setWorkout3Day1Edit] = useState(false)
+    const [workout4Day1Edit,setWorkout4Day1Edit] = useState(false)
+    const [workout5Day1Edit,setWorkout5Day1Edit] = useState(false)
     // Day 2 vars
     const [workoutDay2Name1,setWorkoutDay2Name1] = useState('')
     const [workoutDay2Reps1,setWorkoutDay2Reps1] = useState(1)
@@ -72,6 +79,11 @@ function Workouts(props){
     const [workoutDay2Name5,setWorkoutDay2Name5] = useState('')
     const [workoutDay2Reps5,setWorkoutDay2Reps5] = useState(1)
     const [workoutDay2Sets5,setWorkoutDay2Sets5] = useState(1)
+    const [workout1Day2Edit,setWorkout1Day2Edit] = useState(false)
+    const [workout2Day2Edit,setWorkout2Day2Edit] = useState(false)
+    const [workout3Day2Edit,setWorkout3Day2Edit] = useState(false)
+    const [workout4Day2Edit,setWorkout4Day2Edit] = useState(false)
+    const [workout5Day2Edit,setWorkout5Day2Edit] = useState(false)
     // Day 3 vars
     const [workoutDay3Name1,setWorkoutDay3Name1] = useState('')
     const [workoutDay3Reps1,setWorkoutDay3Reps1] = useState(1)
@@ -88,6 +100,11 @@ function Workouts(props){
     const [workoutDay3Name5,setWorkoutDay3Name5] = useState('')
     const [workoutDay3Reps5,setWorkoutDay3Reps5] = useState(1)
     const [workoutDay3Sets5,setWorkoutDay3Sets5] = useState(1)
+    const [workout1Day3Edit,setWorkout1Day3Edit] = useState(false)
+    const [workout2Day3Edit,setWorkout2Day3Edit] = useState(false)
+    const [workout3Day3Edit,setWorkout3Day3Edit] = useState(false)
+    const [workout4Day3Edit,setWorkout4Day3Edit] = useState(false)
+    const [workout5Day3Edit,setWorkout5Day3Edit] = useState(false)
     // Day 4 vars
     const [workoutDay4Name1,setWorkoutDay4Name1] = useState('')
     const [workoutDay4Reps1,setWorkoutDay4Reps1] = useState(1)
@@ -104,6 +121,11 @@ function Workouts(props){
     const [workoutDay4Name5,setWorkoutDay4Name5] = useState('')
     const [workoutDay4Reps5,setWorkoutDay4Reps5] = useState(1)
     const [workoutDay4Sets5,setWorkoutDay4Sets5] = useState(1)
+    const [workout1Day4Edit,setWorkout1Day4Edit] = useState(false)
+    const [workout2Day4Edit,setWorkout2Day4Edit] = useState(false)
+    const [workout3Day4Edit,setWorkout3Day4Edit] = useState(false)
+    const [workout4Day4Edit,setWorkout4Day4Edit] = useState(false)
+    const [workout5Day4Edit,setWorkout5Day4Edit] = useState(false)
     // Day 5 vars
     const [workoutDay5Name1,setWorkoutDay5Name1] = useState('')
     const [workoutDay5Reps1,setWorkoutDay5Reps1] = useState(1)
@@ -120,6 +142,11 @@ function Workouts(props){
     const [workoutDay5Name5,setWorkoutDay5Name5] = useState('')
     const [workoutDay5Reps5,setWorkoutDay5Reps5] = useState(1)
     const [workoutDay5Sets5,setWorkoutDay5Sets5] = useState(1)
+    const [workout1Day5Edit,setWorkout1Day5Edit] = useState(false)
+    const [workout2Day5Edit,setWorkout2Day5Edit] = useState(false)
+    const [workout3Day5Edit,setWorkout3Day5Edit] = useState(false)
+    const [workout4Day5Edit,setWorkout4Day5Edit] = useState(false)
+    const [workout5Day5Edit,setWorkout5Day5Edit] = useState(false)
 
     // Workout 1 Day 1
     let day1Name1 = e =>{
@@ -145,6 +172,14 @@ function Workouts(props){
             setWorkoutDay1Sets1(workoutDay1Sets1 + 1)
         }
     }
+    function updateDay1Workout1(){
+        Axios.post('/api/workout1day1',{username,workoutDay1Name1,workoutDay1Sets1,workoutDay1Reps1}).then(() => {
+            setWorkout1Day1Edit(false)
+        })
+    }
+    function editDay1Workout1(){
+        setWorkout1Day1Edit(true)
+    }
     // Workout 2 Day 1
     let day1Name2 = e =>{
         setWorkoutDay1Name2(e.target.value)
@@ -168,6 +203,9 @@ function Workouts(props){
         if(workoutDay1Sets2 < 10){
             setWorkoutDay1Sets2(workoutDay1Sets2 + 1)
         }
+    }
+    function editDay1Workout2(){
+        setWorkout2Day1Edit(true)
     }
     // Workout 3 Day 1
     let day1Name3 = e =>{
@@ -193,6 +231,9 @@ function Workouts(props){
             setWorkoutDay1Sets3(workoutDay1Sets3 + 1)
         }
     }
+    function editDay1Workout3(){
+        setWorkout3Day1Edit(true)
+    }
     // Workout 4 Day 1
     let day1Name4 = e =>{
         setWorkoutDay1Name4(e.target.value)
@@ -217,6 +258,9 @@ function Workouts(props){
             setWorkoutDay1Sets4(workoutDay1Sets4 + 1)
         }
     }
+    function editDay1Workout4(){
+        setWorkout4Day1Edit(true)
+    }
     // Workout 5 Day 1
     let day1Name5 = e =>{
         setWorkoutDay1Name5(e.target.value)
@@ -240,6 +284,9 @@ function Workouts(props){
         if(workoutDay1Sets5 < 10){
             setWorkoutDay1Sets5(workoutDay1Sets5 + 1)
         }
+    }
+    function editDay1Workout5(){
+        setWorkout5Day1Edit(true)
     }
     // 
     // Workout 1 Day 2
@@ -267,6 +314,9 @@ function Workouts(props){
             setWorkoutDay2Sets1(workoutDay2Sets1 + 1)
         }
     }
+    function editDay2Workout1(){
+        setWorkout1Day2Edit(true)
+    }
     // Workout 2 Day 2
     let day2Name2 = e =>{
         setWorkoutDay2Name2(e.target.value)
@@ -290,6 +340,9 @@ function Workouts(props){
         if(workoutDay2Sets2 < 10){
             setWorkoutDay2Sets2(workoutDay2Sets2 + 1)
         }
+    }
+    function editDay2Workout2(){
+        setWorkout2Day2Edit(true)
     }
     // Workout 3 Day 2
     let day2Name3 = e =>{
@@ -315,6 +368,9 @@ function Workouts(props){
             setWorkoutDay2Sets3(workoutDay2Sets3 + 1)
         }
     }
+    function editDay2Workout3(){
+        setWorkout3Day2Edit(true)
+    }
     // Workout 4 Day 2
     let day2Name4 = e =>{
         setWorkoutDay2Name4(e.target.value)
@@ -339,6 +395,9 @@ function Workouts(props){
             setWorkoutDay2Sets4(workoutDay2Sets4 + 1)
         }
     }
+    function editDay2Workout4(){
+        setWorkout4Day2Edit(true)
+    }
     // Workout 5 Day 2
     let day2Name5 = e =>{
         setWorkoutDay2Name5(e.target.value)
@@ -362,6 +421,9 @@ function Workouts(props){
         if(workoutDay2Sets5 < 10){
             setWorkoutDay2Sets5(workoutDay2Sets5 + 1)
         }
+    }
+    function editDay2Workout5(){
+        setWorkout5Day2Edit(true)
     }
     // 
     // Workout 1 Day 3
@@ -389,6 +451,9 @@ function Workouts(props){
             setWorkoutDay3Sets1(workoutDay3Sets1 + 1)
         }
     }
+    function editDay3Workout1(){
+        setWorkout1Day3Edit(true)
+    }
     // Workout 2 Day 3
     let day3Name2 = e =>{
         setWorkoutDay3Name2(e.target.value)
@@ -412,6 +477,9 @@ function Workouts(props){
         if(workoutDay3Sets2 < 10){
             setWorkoutDay3Sets2(workoutDay3Sets2 + 1)
         }
+    }
+    function editDay3Workout2(){
+        setWorkout2Day3Edit(true)
     }
     // Workout 3 Day 3
     let day3Name3 = e =>{
@@ -437,6 +505,9 @@ function Workouts(props){
             setWorkoutDay3Sets3(workoutDay3Sets3 + 1)
         }
     }
+    function editDay3Workout3(){
+        setWorkout3Day3Edit(true)
+    }
     // Workout 4 Day 3
     let day3Name4 = e =>{
         setWorkoutDay3Name4(e.target.value)
@@ -461,6 +532,9 @@ function Workouts(props){
             setWorkoutDay3Sets4(workoutDay3Sets4 + 1)
         }
     }
+    function editDay3Workout4(){
+        setWorkout3Day4Edit(true)
+    }
     // Workout 5 Day 3
     let day3Name5 = e =>{
         setWorkoutDay3Name5(e.target.value)
@@ -484,6 +558,9 @@ function Workouts(props){
         if(workoutDay3Sets5 < 10){
             setWorkoutDay3Sets5(workoutDay3Sets5 + 1)
         }
+    }
+    function editDay3Workout5(){
+        setWorkout5Day3Edit(true)
     }
     // 
     // Workout 1 Day 4
@@ -511,6 +588,9 @@ function Workouts(props){
             setWorkoutDay4Sets1(workoutDay4Sets1 + 1)
         }
     }
+    function editDay4Workout1(){
+        setWorkout1Day4Edit(true)
+    }
     // Workout 2 Day 4
     let day4Name2 = e =>{
         setWorkoutDay4Name2(e.target.value)
@@ -534,6 +614,9 @@ function Workouts(props){
         if(workoutDay4Sets2 < 10){
             setWorkoutDay4Sets2(workoutDay4Sets2 + 1)
         }
+    }
+    function editDay4Workout2(){
+        setWorkout2Day4Edit(true)
     }
     // Workout 3 Day 4
     let day4Name3 = e =>{
@@ -559,6 +642,9 @@ function Workouts(props){
             setWorkoutDay4Sets3(workoutDay4Sets3 + 1)
         }
     }
+    function editDay4Workout3(){
+        setWorkout3Day4Edit(true)
+    }
     // Workout 4 Day 4
     let day4Name4 = e =>{
         setWorkoutDay4Name4(e.target.value)
@@ -583,6 +669,9 @@ function Workouts(props){
             setWorkoutDay4Sets4(workoutDay4Sets4 + 1)
         }
     }
+    function editDay4Workout4(){
+        setWorkout4Day4Edit(true)
+    }
     // Workout 5 Day 4
     let day4Name5 = e =>{
         setWorkoutDay4Name5(e.target.value)
@@ -606,6 +695,9 @@ function Workouts(props){
         if(workoutDay4Sets5 < 10){
             setWorkoutDay4Sets5(workoutDay4Sets5 + 1)
         }
+    }
+    function editDay4Workout5(){
+        setWorkout5Day4Edit(true)
     }
     // 
     // Workout 1 Day 5
@@ -633,6 +725,9 @@ function Workouts(props){
             setWorkoutDay5Sets1(workoutDay5Sets1 + 1)
         }
     }
+    function editDay5Workout1(){
+        setWorkout1Day5Edit(true)
+    }
     // Workout 2 Day 5
     let day5Name2 = e =>{
         setWorkoutDay5Name2(e.target.value)
@@ -656,6 +751,9 @@ function Workouts(props){
         if(workoutDay5Sets2 < 10){
             setWorkoutDay5Sets2(workoutDay5Sets2 + 1)
         }
+    }
+    function editDay5Workout2(){
+        setWorkout2Day5Edit(true)
     }
     // Workout 3 Day 5
     let day5Name3 = e =>{
@@ -681,6 +779,9 @@ function Workouts(props){
             setWorkoutDay5Sets3(workoutDay5Sets3 + 1)
         }
     }
+    function editDay5Workout3(){
+        setWorkout3Day5Edit(true)
+    }
     // Workout 4 Day 5
     let day5Name4 = e =>{
         setWorkoutDay5Name4(e.target.value)
@@ -704,6 +805,9 @@ function Workouts(props){
         if(workoutDay5Sets4 < 10){
             setWorkoutDay5Sets4(workoutDay5Sets4 + 1)
         }
+    }
+    function editDay5Workout4(){
+        setWorkout4Day5Edit(true)
     }
     // Workout 5 Day 5
     let day5Name5 = e =>{
@@ -729,12 +833,15 @@ function Workouts(props){
             setWorkoutDay5Sets5(workoutDay5Sets5 + 1)
         }
     }
+    function editDay5Workout5(){
+        setWorkout5Day5Edit(true)
+    }
     
 
     return(
         <div>
             <h1>Workouts</h1>
-            <p>Username:{props.reduxState.username}</p>
+            <p>Username:{username}</p>
             <h2 className='day'>Day 1:</h2>
             <div className='workoutHolder'>
                 <div className='workout'>
@@ -744,27 +851,43 @@ function Workouts(props){
                         ):(
                             <h3 className='text'>{workoutDay1Name1}</h3>
                         )}
-                    <input 
-                        placeholder='Change Name:'
-                        type='text' 
-                        maxLength={30} 
-                        onChange={day1Name1}/>
+                        {workout1Day1Edit === true ? (
+                            <input 
+                                placeholder='Change Name:'
+                                type='text' 
+                                maxLength={30} 
+                                onChange={day1Name1}/>
+                        ):(
+                            null
+                        )}
                     </div>
                     <div>
                         <p className='text'>Reps:{workoutDay1Reps1}</p>
+                        {workout1Day1Edit === true ? (
                         <div className='buttonHolder'>
                             <Button onClick={() => day1Reps1Down()} className={style.downButton}>{'<<<'}</Button>
                             <Button onClick={() => day1Reps1Up()} className={style.upButton}>{'>>>'}</Button>
                         </div>
+                        ):(
+                            null
+                        )}
                     </div>
                     <div>
                         <p className='text'>Sets:{workoutDay1Sets1}</p>
+                        {workout1Day1Edit === true ? (
                         <div className='buttonHolder'>
                             <Button onClick={() => day1Sets1Down()} className={style.downButton}>{'<<<'}</Button>
                             <Button onClick={() => day1Sets1Up()} className={style.upButton}>{'>>>'}</Button>
                         </div>
+                        ):(
+                            null
+                        )}
                     </div>
-                    <Button className={style.confirmButton}>Submit</Button>
+                    {workout1Day1Edit === true ? (
+                        <Button onClick={() => updateDay1Workout1()}className={style.button}>Submit</Button>
+                        ):(
+                        <Button onClick={() => editDay1Workout1()}className={style.button}>Edit</Button>
+                    )}
                 </div>
                 <div className='workout'>
                     <div>
@@ -773,26 +896,45 @@ function Workouts(props){
                         ):(
                             <h3 className='text'>{workoutDay1Name2}</h3>
                         )}
-                    <input
-                        placeholder='Change Name:'
-                        type='text' 
-                        maxLength={30} 
-                        onChange={day1Name2}/>
+                        {workout2Day1Edit === true ? (
+                            <input
+                                placeholder='Change Name:'
+                                type='text' 
+                                maxLength={30} 
+                                onChange={day1Name2}/>
+
+                        ):(
+                            null
+                        )}
                     </div>
                     <div>
                         <p className='text'>Reps:{workoutDay1Reps2}</p>
-                        <div className='buttonHolder'>
-                            <Button onClick={() => day1Reps2Down()} className={style.downButton}>{'<<<'}</Button>
-                            <Button onClick={() => day1Reps2Up()} className={style.upButton}>{'>>>'}</Button>
-                        </div>
+                        {workout2Day1Edit === true ? (
+                            <div className='buttonHolder'>
+                                <Button onClick={() => day1Reps2Down()} className={style.downButton}>{'<<<'}</Button>
+                                <Button onClick={() => day1Reps2Up()} className={style.upButton}>{'>>>'}</Button>
+                         </div>
+
+                        ):(
+                            null
+                        )}
                     </div>
                     <div>
                         <p className='text'>Sets:{workoutDay1Sets2}</p>
+                        {workout2Day1Edit === true ? (
                         <div className='buttonHolder'>
                             <Button onClick={() => day1Sets2Down()} className={style.downButton}>{'<<<'}</Button>
                             <Button onClick={() => day1Sets2Up()} className={style.upButton}>{'>>>'}</Button>
                         </div>
+                        ):(
+                            null
+                        )}
                     </div>
+                        {workout2Day1Edit === true ? (
+                        <Button className={style.button}>Submit</Button>
+                        ):(
+                        <Button onClick={() => editDay1Workout2()}className={style.button}>Edit</Button>
+                        )}
                 </div>
                 <div className='workout'>
                     <div>
@@ -801,26 +943,43 @@ function Workouts(props){
                         ):(
                             <h3 className='text'>{workoutDay1Name3}</h3>
                         )}
-                    <input 
-                        placeholder='Change Name:'
-                        type='text' 
-                        maxLength={30} 
-                        onChange={day1Name3}/>
+                        {workout3Day1Edit === true ? (
+                            <input 
+                                placeholder='Change Name:'
+                                type='text' 
+                                maxLength={30} 
+                                onChange={day1Name3}/>
+                        ):(
+                            null
+                        )}
                     </div>
                     <div>
                         <p className='text'>Reps:{workoutDay1Reps3}</p>
+                        {workout3Day1Edit === true ? (
                         <div className='buttonHolder'>
                             <Button onClick={() => day1Reps3Down()} className={style.downButton}>{'<<<'}</Button>
                             <Button onClick={() => day1Reps3Up()} className={style.upButton}>{'>>>'}</Button>
                         </div>
+                        ):(
+                            null
+                        )}
                     </div>
                     <div>
                         <p className='text'>Sets:{workoutDay1Sets3}</p>
+                        {workout3Day1Edit === true ? (
                         <div className='buttonHolder'>
                             <Button onClick={() => day1Sets3Down()} className={style.downButton}>{'<<<'}</Button>
                             <Button onClick={() => day1Sets3Up()} className={style.upButton}>{'>>>'}</Button>
                         </div>
+                        ):(
+                            null
+                        )}
                     </div>
+                    {workout3Day1Edit === true ? (
+                        <Button className={style.button}>Submit</Button>
+                        ):(
+                        <Button onClick={() => editDay1Workout3()}className={style.button}>Edit</Button>
+                    )}
                 </div>
                 <div className='workout'>
                     <div>
@@ -829,26 +988,44 @@ function Workouts(props){
                         ):(
                             <h3 className='text'>{workoutDay1Name4}</h3>
                         )}
-                    <input
-                        placeholder='Change Name:'
-                        type='text' 
-                        maxLength={30} 
-                        onChange={day1Name4}/>
+                        {workout4Day1Edit === true ? (
+                            <input
+                                placeholder='Change Name:'
+                                type='text' 
+                                maxLength={30} 
+                                onChange={day1Name4}/>
+                        ):(
+                            null
+                        )}
+
                     </div>
                     <div>
                         <p className='text'>Reps:{workoutDay1Reps4}</p>
+                        {workout4Day1Edit === true ? (
                         <div className='buttonHolder'>
                             <Button onClick={() => day1Reps4Down()} className={style.downButton}>{'<<<'}</Button>
                             <Button onClick={() => day1Reps4Up()} className={style.upButton}>{'>>>'}</Button>
                         </div>
+                        ):(
+                            null
+                        )}
                     </div>
                     <div>
                         <p className='text'>Sets:{workoutDay1Sets4}</p>
+                        {workout4Day1Edit === true ? (
                         <div className='buttonHolder'>
                             <Button onClick={() => day1Sets4Down()} className={style.downButton}>{'<<<'}</Button>
                             <Button onClick={() => day1Sets4Up()} className={style.upButton}>{'>>>'}</Button>
                         </div>
+                        ):(
+                            null
+                        )}
                     </div>
+                    {workout4Day1Edit === true ? (
+                        <Button className={style.button}>Submit</Button>
+                        ):(
+                        <Button onClick={() => editDay1Workout4()}className={style.button}>Edit</Button>
+                    )}
                 </div>
                 <div className='workout'>
                     <div>
@@ -857,27 +1034,45 @@ function Workouts(props){
                         ):(
                             <h3 className='text'>{workoutDay1Name5}</h3>
                         )}
-                    <input 
-                        placeholder='Change Name:'
-                        type='text' 
-                        maxLength={30} 
-                        onChange={day1Name5}/>
+                        {workout5Day1Edit === true ? (
+                            <input 
+                                placeholder='Change Name:'
+                                type='text' 
+                                maxLength={30} 
+                                onChange={day1Name5}/>
+                        ):(
+                            null
+                        )}
                     </div>
                     <div>
                         <p className='text'>Reps:{workoutDay1Reps5}</p>
+                        {workout5Day1Edit === true ? (
                         <div className='buttonHolder'>
                             <Button onClick={() => day1Reps5Down()} className={style.downButton}>{'<<<'}</Button>
                             <Button onClick={() => day1Reps5Up()} className={style.upButton}>{'>>>'}</Button>
                         </div>
+                        ):(
+                            null
+                        )}
                     </div>
                     <div>
                         <p className='text'>Sets:{workoutDay1Sets5}</p>
+                        {workout5Day1Edit === true ? (
                         <div className='buttonHolder'>
                             <Button onClick={() => day1Sets5Down()} className={style.downButton}>{'<<<'}</Button>
                             <Button onClick={() => day1Sets5Up()} className={style.upButton}>{'>>>'}</Button>
                         </div>
+                        ):(
+                            null
+                        )}
                     </div>
+                    {workout5Day1Edit === true ? (
+                        <Button className={style.button}>Submit</Button>
+                        ):(
+                        <Button onClick={() => editDay1Workout5()}className={style.button}>Edit</Button>
+                    )}
                 </div>
+
             </div>
 
         </div>
