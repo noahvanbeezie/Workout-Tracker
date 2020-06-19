@@ -173,7 +173,10 @@ function Workouts(props){
         }
     }
     function updateDay1Workout1(){
-        Axios.post('/api/workout1day1',{username,workoutDay1Name1,workoutDay1Sets1,workoutDay1Reps1}).then(() => {
+        let name = workoutDay1Name1
+        let reps = workoutDay1Reps1
+        let sets = workoutDay1Sets1
+        Axios.post('/api/workout1day1',{username,name,reps,sets}).then(() => {
             setWorkout1Day1Edit(false)
         })
     }
