@@ -39,6 +39,8 @@ app.post('/api/register', authController.register)
 app.post('/api/logout', authController.logout)
 // Profile
 app.post('/api/updateprefs', wHAController.updatePrefs)
+// Workouts Page On Load
+app.post('/api/workouts', workoutController.fetchWorkouts)
 // Workouts Day 1
 app.post('/api/workout1day1', workoutController.updateDay1Workout1)
 // app.post('/api/workout2day1', workoutController.updateDay1Workout2)

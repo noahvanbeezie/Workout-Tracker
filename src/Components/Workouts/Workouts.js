@@ -42,6 +42,8 @@ const styles = makeStyles({
 function Workouts(props){
     const style = styles();
     const username = props.reduxState.username
+    const [onLoad,setOnLoad] = useState(false)
+    const [data,setData] = useState()
     // Day 1 vars
     const [workoutDay1Name1,setWorkoutDay1Name1] = useState('')
     const [workoutDay1Reps1,setWorkoutDay1Reps1] = useState(1)
@@ -147,6 +149,18 @@ function Workouts(props){
     const [workout3Day5Edit,setWorkout3Day5Edit] = useState(false)
     const [workout4Day5Edit,setWorkout4Day5Edit] = useState(false)
     const [workout5Day5Edit,setWorkout5Day5Edit] = useState(false)
+    //On Load
+    useEffect(() => {
+        if(onLoad === false){
+            Axios.post('/api/workouts',{username}).then(res => {
+                setData(res.data)
+            })
+            setOnLoad(true)
+        }else{
+            return
+        }
+
+    },{onLoad})
 
     // Workout 1 Day 1
     let day1Name1 = e =>{
@@ -841,6 +855,7 @@ function Workouts(props){
     }
     
 
+    console.log(data)
     return(
         <div>
             <h1>Workouts</h1>
