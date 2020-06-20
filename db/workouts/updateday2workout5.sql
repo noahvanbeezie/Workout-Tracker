@@ -1,2 +1,2 @@
-UPDATE workouts SET day1workout5=$1,day1workout5reps=$2,day1workout5sets=$3
+UPDATE workouts SET day2workout5=$1,day2workout5reps=$2,day2workout5sets=$3
 WHERE workoutusername=$4
