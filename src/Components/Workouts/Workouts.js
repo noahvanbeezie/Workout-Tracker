@@ -610,6 +610,14 @@ function Workouts(props){
             setWorkoutDay2Sets1(workoutDay2Sets1 + 1)
         }
     }
+    function updateDay2Workout1(){
+        let name = workoutDay2Name1
+        let reps = workoutDay2Reps1
+        let sets = workoutDay2Sets1
+        Axios.post('/api/workout1day2',{username,name,reps,sets}).then(() => {
+            setWorkout1Day2Edit(false)
+        })
+    }
     function editDay2Workout1(){
         setWorkout1Day2Edit(true)
     }
@@ -636,6 +644,14 @@ function Workouts(props){
         if(workoutDay2Sets2 < 10){
             setWorkoutDay2Sets2(workoutDay2Sets2 + 1)
         }
+    }
+    function updateDay2Workout2(){
+        let name = workoutDay2Name2
+        let reps = workoutDay2Reps2
+        let sets = workoutDay2Sets2
+        Axios.post('/api/workout2day2',{username,name,reps,sets}).then(() => {
+            setWorkout2Day2Edit(false)
+        })
     }
     function editDay2Workout2(){
         setWorkout2Day2Edit(true)
@@ -664,6 +680,14 @@ function Workouts(props){
             setWorkoutDay2Sets3(workoutDay2Sets3 + 1)
         }
     }
+    function updateDay2Workout3(){
+        let name = workoutDay2Name3
+        let reps = workoutDay2Reps3
+        let sets = workoutDay2Sets3
+        Axios.post('/api/workout3day2',{username,name,reps,sets}).then(() => {
+            setWorkout3Day2Edit(false)
+        })
+    }
     function editDay2Workout3(){
         setWorkout3Day2Edit(true)
     }
@@ -691,6 +715,14 @@ function Workouts(props){
             setWorkoutDay2Sets4(workoutDay2Sets4 + 1)
         }
     }
+    function updateDay2Workout4(){
+        let name = workoutDay2Name4
+        let reps = workoutDay2Reps4
+        let sets = workoutDay2Sets4
+        Axios.post('/api/workout4day2',{username,name,reps,sets}).then(() => {
+            setWorkout4Day2Edit(false)
+        })
+    }
     function editDay2Workout4(){
         setWorkout4Day2Edit(true)
     }
@@ -717,6 +749,14 @@ function Workouts(props){
         if(workoutDay2Sets5 < 10){
             setWorkoutDay2Sets5(workoutDay2Sets5 + 1)
         }
+    }
+    function updateDay2Workout5(){
+        let name = workoutDay2Name5
+        let reps = workoutDay2Reps5
+        let sets = workoutDay2Sets5
+        Axios.post('/api/workout5day2',{username,name,reps,sets}).then(() => {
+            setWorkout5Day2Edit(false)
+        })
     }
     function editDay2Workout5(){
         setWorkout5Day2Edit(true)
@@ -747,6 +787,14 @@ function Workouts(props){
             setWorkoutDay3Sets1(workoutDay3Sets1 + 1)
         }
     }
+    function updateDay3Workout1(){
+        let name = workoutDay3Name1
+        let reps = workoutDay3Reps1
+        let sets = workoutDay3Sets1
+        Axios.post('/api/workout1day3',{username,name,reps,sets}).then(() => {
+            setWorkout1Day3Edit(false)
+        })
+    }
     function editDay3Workout1(){
         setWorkout1Day3Edit(true)
     }
@@ -773,6 +821,14 @@ function Workouts(props){
         if(workoutDay3Sets2 < 10){
             setWorkoutDay3Sets2(workoutDay3Sets2 + 1)
         }
+    }
+    function updateDay3Workout2(){
+        let name = workoutDay3Name2
+        let reps = workoutDay3Reps2
+        let sets = workoutDay3Sets2
+        Axios.post('/api/workout2day3',{username,name,reps,sets}).then(() => {
+            setWorkout2Day3Edit(false)
+        })
     }
     function editDay3Workout2(){
         setWorkout2Day3Edit(true)
@@ -801,6 +857,14 @@ function Workouts(props){
             setWorkoutDay3Sets3(workoutDay3Sets3 + 1)
         }
     }
+    function updateDay3Workout3(){
+        let name = workoutDay3Name3
+        let reps = workoutDay3Reps3
+        let sets = workoutDay3Sets3
+        Axios.post('/api/workout3day3',{username,name,reps,sets}).then(() => {
+            setWorkout3Day3Edit(false)
+        })
+    }
     function editDay3Workout3(){
         setWorkout3Day3Edit(true)
     }
@@ -828,6 +892,14 @@ function Workouts(props){
             setWorkoutDay3Sets4(workoutDay3Sets4 + 1)
         }
     }
+    function updateDay3Workout4(){
+        let name = workoutDay3Name4
+        let reps = workoutDay3Reps4
+        let sets = workoutDay3Sets4
+        Axios.post('/api/workout4day3',{username,name,reps,sets}).then(() => {
+            setWorkout4Day3Edit(false)
+        })
+    }
     function editDay3Workout4(){
         setWorkout3Day4Edit(true)
     }
@@ -854,6 +926,14 @@ function Workouts(props){
         if(workoutDay3Sets5 < 10){
             setWorkoutDay3Sets5(workoutDay3Sets5 + 1)
         }
+    }
+    function updateDay3Workout5(){
+        let name = workoutDay3Name5
+        let reps = workoutDay3Reps5
+        let sets = workoutDay3Sets5
+        Axios.post('/api/workout5day3',{username,name,reps,sets}).then(() => {
+            setWorkout5Day3Edit(false)
+        })
     }
     function editDay3Workout5(){
         setWorkout5Day3Edit(true)
@@ -884,6 +964,14 @@ function Workouts(props){
             setWorkoutDay4Sets1(workoutDay4Sets1 + 1)
         }
     }
+    function updateDay4Workout1(){
+        let name = workoutDay4Name1
+        let reps = workoutDay4Reps1
+        let sets = workoutDay4Sets1
+        Axios.post('/api/workout1day4',{username,name,reps,sets}).then(() => {
+            setWorkout1Day4Edit(false)
+        })
+    }
     function editDay4Workout1(){
         setWorkout1Day4Edit(true)
     }
@@ -910,6 +998,14 @@ function Workouts(props){
         if(workoutDay4Sets2 < 10){
             setWorkoutDay4Sets2(workoutDay4Sets2 + 1)
         }
+    }
+    function updateDay4Workout2(){
+        let name = workoutDay4Name2
+        let reps = workoutDay4Reps2
+        let sets = workoutDay4Sets2
+        Axios.post('/api/workout2day4',{username,name,reps,sets}).then(() => {
+            setWorkout2Day4Edit(false)
+        })
     }
     function editDay4Workout2(){
         setWorkout2Day4Edit(true)
@@ -938,6 +1034,14 @@ function Workouts(props){
             setWorkoutDay4Sets3(workoutDay4Sets3 + 1)
         }
     }
+    function updateDay4Workout3(){
+        let name = workoutDay4Name3
+        let reps = workoutDay4Reps3
+        let sets = workoutDay4Sets3
+        Axios.post('/api/workout3day4',{username,name,reps,sets}).then(() => {
+            setWorkout3Day4Edit(false)
+        })
+    }
     function editDay4Workout3(){
         setWorkout3Day4Edit(true)
     }
@@ -965,6 +1069,14 @@ function Workouts(props){
             setWorkoutDay4Sets4(workoutDay4Sets4 + 1)
         }
     }
+    function updateDay4Workout4(){
+        let name = workoutDay4Name4
+        let reps = workoutDay4Reps4
+        let sets = workoutDay4Sets4
+        Axios.post('/api/workout4day4',{username,name,reps,sets}).then(() => {
+            setWorkout4Day4Edit(false)
+        })
+    }
     function editDay4Workout4(){
         setWorkout4Day4Edit(true)
     }
@@ -991,6 +1103,14 @@ function Workouts(props){
         if(workoutDay4Sets5 < 10){
             setWorkoutDay4Sets5(workoutDay4Sets5 + 1)
         }
+    }
+    function updateDay4Workout5(){
+        let name = workoutDay4Name5
+        let reps = workoutDay4Reps5
+        let sets = workoutDay4Sets5
+        Axios.post('/api/workout5day4',{username,name,reps,sets}).then(() => {
+            setWorkout5Day4Edit(false)
+        })
     }
     function editDay4Workout5(){
         setWorkout5Day4Edit(true)
@@ -1021,6 +1141,14 @@ function Workouts(props){
             setWorkoutDay5Sets1(workoutDay5Sets1 + 1)
         }
     }
+    function updateDay5Workout1(){
+        let name = workoutDay5Name1
+        let reps = workoutDay5Reps1
+        let sets = workoutDay5Sets1
+        Axios.post('/api/workout1day5',{username,name,reps,sets}).then(() => {
+            setWorkout1Day5Edit(false)
+        })
+    }
     function editDay5Workout1(){
         setWorkout1Day5Edit(true)
     }
@@ -1047,6 +1175,14 @@ function Workouts(props){
         if(workoutDay5Sets2 < 10){
             setWorkoutDay5Sets2(workoutDay5Sets2 + 1)
         }
+    }
+    function updateDay5Workout2(){
+        let name = workoutDay5Name2
+        let reps = workoutDay5Reps2
+        let sets = workoutDay5Sets2
+        Axios.post('/api/workout2day5',{username,name,reps,sets}).then(() => {
+            setWorkout2Day5Edit(false)
+        })
     }
     function editDay5Workout2(){
         setWorkout2Day5Edit(true)
@@ -1075,6 +1211,14 @@ function Workouts(props){
             setWorkoutDay5Sets3(workoutDay5Sets3 + 1)
         }
     }
+    function updateDay5Workout3(){
+        let name = workoutDay5Name3
+        let reps = workoutDay5Reps3
+        let sets = workoutDay5Sets3
+        Axios.post('/api/workout3day5',{username,name,reps,sets}).then(() => {
+            setWorkout3Day5Edit(false)
+        })
+    }
     function editDay5Workout3(){
         setWorkout3Day5Edit(true)
     }
@@ -1102,6 +1246,14 @@ function Workouts(props){
             setWorkoutDay5Sets4(workoutDay5Sets4 + 1)
         }
     }
+    function updateDay5Workout4(){
+        let name = workoutDay5Name4
+        let reps = workoutDay5Reps4
+        let sets = workoutDay5Sets4
+        Axios.post('/api/workout4day5',{username,name,reps,sets}).then(() => {
+            setWorkout4Day5Edit(false)
+        })
+    }
     function editDay5Workout4(){
         setWorkout4Day5Edit(true)
     }
@@ -1128,6 +1280,14 @@ function Workouts(props){
         if(workoutDay5Sets5 < 10){
             setWorkoutDay5Sets5(workoutDay5Sets5 + 1)
         }
+    }
+    function updateDay5Workout5(){
+        let name = workoutDay5Name5
+        let reps = workoutDay5Reps5
+        let sets = workoutDay5Sets5
+        Axios.post('/api/workout5day5',{username,name,reps,sets}).then(() => {
+            setWorkout5Day5Edit(false)
+        })
     }
     function editDay5Workout5(){
         setWorkout5Day5Edit(true)
