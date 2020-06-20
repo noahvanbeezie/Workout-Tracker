@@ -409,7 +409,6 @@ function Workouts(props){
         }
 
     },{onLoad})
-
     // Workout 1 Day 1
     let day1Name1 = e =>{
         setWorkoutDay1Name1(e.target.value)
@@ -469,6 +468,14 @@ function Workouts(props){
             setWorkoutDay1Sets2(workoutDay1Sets2 + 1)
         }
     }
+    function updateDay1Workout2(){
+        let name = workoutDay1Name2
+        let reps = workoutDay1Reps2
+        let sets = workoutDay1Sets2
+        Axios.post('/api/workout2day1',{username,name,reps,sets}).then(() => {
+            setWorkout2Day1Edit(false)
+        })
+    }
     function editDay1Workout2(){
         setWorkout2Day1Edit(true)
     }
@@ -495,6 +502,14 @@ function Workouts(props){
         if(workoutDay1Sets3 < 10){
             setWorkoutDay1Sets3(workoutDay1Sets3 + 1)
         }
+    }
+    function updateDay1Workout3(){
+        let name = workoutDay1Name3
+        let reps = workoutDay1Reps3
+        let sets = workoutDay1Sets3
+        Axios.post('/api/workout3day1',{username,name,reps,sets}).then(() => {
+            setWorkout3Day1Edit(false)
+        })
     }
     function editDay1Workout3(){
         setWorkout3Day1Edit(true)
@@ -523,6 +538,14 @@ function Workouts(props){
             setWorkoutDay1Sets4(workoutDay1Sets4 + 1)
         }
     }
+    function updateDay1Workout4(){
+        let name = workoutDay1Name4
+        let reps = workoutDay1Reps4
+        let sets = workoutDay1Sets4
+        Axios.post('/api/workout4day1',{username,name,reps,sets}).then(() => {
+            setWorkout4Day1Edit(false)
+        })
+    }
     function editDay1Workout4(){
         setWorkout4Day1Edit(true)
     }
@@ -549,6 +572,14 @@ function Workouts(props){
         if(workoutDay1Sets5 < 10){
             setWorkoutDay1Sets5(workoutDay1Sets5 + 1)
         }
+    }
+    function updateDay1Workout5(){
+        let name = workoutDay1Name5
+        let reps = workoutDay1Reps5
+        let sets = workoutDay1Sets5
+        Axios.post('/api/workout5day1',{username,name,reps,sets}).then(() => {
+            setWorkout5Day1Edit(false)
+        })
     }
     function editDay1Workout5(){
         setWorkout5Day1Edit(true)
@@ -1194,7 +1225,7 @@ function Workouts(props){
                         )}
                     </div>
                         {workout2Day1Edit === true ? (
-                        <Button className={style.button}>Submit</Button>
+                        <Button onClick={() => updateDay1Workout2()}className={style.button}>Submit</Button>
                         ):(
                         <Button onClick={() => editDay1Workout2()}className={style.button}>Edit</Button>
                         )}
@@ -1239,7 +1270,7 @@ function Workouts(props){
                         )}
                     </div>
                     {workout3Day1Edit === true ? (
-                        <Button className={style.button}>Submit</Button>
+                        <Button onClick={() => updateDay1Workout3()}className={style.button}>Submit</Button>
                         ):(
                         <Button onClick={() => editDay1Workout3()}className={style.button}>Edit</Button>
                     )}
@@ -1285,7 +1316,7 @@ function Workouts(props){
                         )}
                     </div>
                     {workout4Day1Edit === true ? (
-                        <Button className={style.button}>Submit</Button>
+                        <Button onClick={() => updateDay1Workout4()}className={style.button}>Submit</Button>
                         ):(
                         <Button onClick={() => editDay1Workout4()}className={style.button}>Edit</Button>
                     )}
@@ -1330,7 +1361,7 @@ function Workouts(props){
                         )}
                     </div>
                     {workout5Day1Edit === true ? (
-                        <Button className={style.button}>Submit</Button>
+                        <Button onClick={() => updateDay1Workout5()}className={style.button}>Submit</Button>
                         ):(
                         <Button onClick={() => editDay1Workout5()}className={style.button}>Edit</Button>
                     )}
