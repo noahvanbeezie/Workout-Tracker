@@ -164,7 +164,7 @@ function Workouts(props){
                 }
                 // Day 1 Workout 2
                 if(res.data.day1workout2){
-                    setWorkoutDay1Name1(res.data.day1workout2)
+                    setWorkoutDay1Name2(res.data.day1workout2)
                 }
                 if(res.data.day1workout2reps){
                     setWorkoutDay1Reps2(res.data.day1workout2reps)
