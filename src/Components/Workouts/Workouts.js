@@ -43,7 +43,6 @@ function Workouts(props){
     const style = styles();
     const username = props.reduxState.username
     const [onLoad,setOnLoad] = useState(false)
-    const [data,setData] = useState()
     // Day 1 vars
     const [workoutDay1Name1,setWorkoutDay1Name1] = useState('')
     const [workoutDay1Reps1,setWorkoutDay1Reps1] = useState(1)
@@ -153,7 +152,256 @@ function Workouts(props){
     useEffect(() => {
         if(onLoad === false){
             Axios.post('/api/workouts',{username}).then(res => {
-                setData(res.data)
+                // Day 1 Workout 1
+                if(res.data.day1workout1){
+                    setWorkoutDay1Name1(res.data.day1workout1)
+                }
+                if(res.data.day1workout1reps){
+                    setWorkoutDay1Reps1(res.data.day1workout1reps)
+                }
+                if(res.data.day1workout1sets){
+                    setWorkoutDay1Sets1(res.data.day1workout1sets)
+                }
+                // Day 1 Workout 2
+                if(res.data.day1workout2){
+                    setWorkoutDay1Name1(res.data.day1workout2)
+                }
+                if(res.data.day1workout2reps){
+                    setWorkoutDay1Reps2(res.data.day1workout2reps)
+                }
+                if(res.data.day1workout2sets){
+                    setWorkoutDay1Sets2(res.data.day1workout2sets)
+                }
+                // Day 1 Workout 3
+                if(res.data.day1workout3){
+                    setWorkoutDay1Name3(res.data.day1workout3)
+                }
+                if(res.data.day1workout3reps){
+                    setWorkoutDay1Reps3(res.data.day1workout3reps)
+                }
+                if(res.data.day1workout3sets){
+                    setWorkoutDay1Sets3(res.data.day1workout3sets)
+                }
+                // Day 1 Workout 4
+                if(res.data.day1workout4){
+                    setWorkoutDay1Name4(res.data.day1workout4)
+                }
+                if(res.data.day1workout4reps){
+                    setWorkoutDay1Reps4(res.data.day1workout4reps)
+                }
+                if(res.data.day1workout4sets){
+                    setWorkoutDay1Sets4(res.data.day1workout4sets)
+                }
+                // Day 1 Workout 5
+                if(res.data.day1workout5){
+                    setWorkoutDay1Name5(res.data.day1workout5)
+                }
+                if(res.data.day1workout5reps){
+                    setWorkoutDay1Reps5(res.data.day1workout5reps)
+                }
+                if(res.data.day1workout5sets){
+                    setWorkoutDay1Sets5(res.data.day1workout5sets)
+                }
+                // Day 2 Workout 1
+                if(res.data.day2workout1){
+                    setWorkoutDay2Name1(res.data.day2workout1)
+                }
+                if(res.data.day2workout1reps){
+                    setWorkoutDay2Reps1(res.data.day2workout1reps)
+                }
+                if(res.data.day2workout1sets){
+                    setWorkoutDay2Sets1(res.data.day2workout1sets)
+                }
+                // Day 2 Workout 2
+                if(res.data.day2workout2){
+                    setWorkoutDay2Name1(res.data.day2workout2)
+                }
+                if(res.data.day2workout2reps){
+                    setWorkoutDay2Reps2(res.data.day2workout2reps)
+                }
+                if(res.data.day2workout2sets){
+                    setWorkoutDay2Sets2(res.data.day2workout2sets)
+                }
+                // Day 2 Workout 3
+                if(res.data.day2workout3){
+                    setWorkoutDay2Name3(res.data.day2workout3)
+                }
+                if(res.data.day2workout3reps){
+                    setWorkoutDay2Reps3(res.data.day2workout3reps)
+                }
+                if(res.data.day2workout3sets){
+                    setWorkoutDay1Sets3(res.data.day1workout3sets)
+                }
+                // Day 2 Workout 4
+                if(res.data.day2workout4){
+                    setWorkoutDay2Name4(res.data.day2workout4)
+                }
+                if(res.data.day2workout4reps){
+                    setWorkoutDay2Reps4(res.data.day2workout4reps)
+                }
+                if(res.data.day2workout4sets){
+                    setWorkoutDay2Sets4(res.data.day2workout4sets)
+                }
+                // Day 2 Workout 5
+                if(res.data.day2workout5){
+                    setWorkoutDay2Name5(res.data.day2workout5)
+                }
+                if(res.data.day2workout5reps){
+                    setWorkoutDay2Reps5(res.data.day2workout5reps)
+                }
+                if(res.data.day2workout5sets){
+                    setWorkoutDay2Sets5(res.data.day2workout5sets)
+                }
+                // Day 3 Workout 1
+                if(res.data.day3workout1){
+                    setWorkoutDay3Name1(res.data.day3workout1)
+                }
+                if(res.data.day3workout1reps){
+                    setWorkoutDay3Reps1(res.data.day3workout1reps)
+                }
+                if(res.data.day3workout1sets){
+                    setWorkoutDay3Sets1(res.data.day3workout1sets)
+                }
+                // Day 3 Workout 2
+                if(res.data.day3workout2){
+                    setWorkoutDay3Name1(res.data.day3workout2)
+                }
+                if(res.data.day3workout2reps){
+                    setWorkoutDay3Reps2(res.data.day3workout2reps)
+                }
+                if(res.data.day3workout2sets){
+                    setWorkoutDay3Sets2(res.data.day3workout2sets)
+                }
+                // Day 3 Workout 3
+                if(res.data.day3workout3){
+                    setWorkoutDay3Name3(res.data.day3workout3)
+                }
+                if(res.data.day3workout3reps){
+                    setWorkoutDay3Reps3(res.data.day3workout3reps)
+                }
+                if(res.data.day3workout3sets){
+                    setWorkoutDay3Sets3(res.data.day3workout3sets)
+                }
+                // Day 3 Workout 4
+                if(res.data.day3workout4){
+                    setWorkoutDay3Name4(res.data.day3workout4)
+                }
+                if(res.data.day3workout4reps){
+                    setWorkoutDay3Reps4(res.data.day3workout4reps)
+                }
+                if(res.data.day3workout4sets){
+                    setWorkoutDay3Sets4(res.data.day3workout4sets)
+                }
+                // Day 3 Workout 5
+                if(res.data.day3workout5){
+                    setWorkoutDay3Name5(res.data.day3workout5)
+                }
+                if(res.data.day3workout5reps){
+                    setWorkoutDay3Reps5(res.data.day3workout5reps)
+                }
+                if(res.data.day3workout5sets){
+                    setWorkoutDay3Sets5(res.data.day3workout5sets)
+                }
+                // Day 4 Workout 1
+                if(res.data.day4workout1){
+                    setWorkoutDay4Name1(res.data.day4workout1)
+                }
+                if(res.data.day4workout1reps){
+                    setWorkoutDay4Reps1(res.data.day4workout1reps)
+                }
+                if(res.data.day4workout1sets){
+                    setWorkoutDay4Sets1(res.data.day4workout1sets)
+                }
+                // Day 4 Workout 2
+                if(res.data.day4workout2){
+                    setWorkoutDay4Name1(res.data.day4workout2)
+                }
+                if(res.data.day4workout2reps){
+                    setWorkoutDay4Reps2(res.data.day4workout2reps)
+                }
+                if(res.data.day4workout2sets){
+                    setWorkoutDay4Sets2(res.data.day4workout2sets)
+                }
+                // Day 4 Workout 3
+                if(res.data.day4workout3){
+                    setWorkoutDay4Name3(res.data.day4workout3)
+                }
+                if(res.data.day4workout3reps){
+                    setWorkoutDay4Reps3(res.data.day4workout3reps)
+                }
+                if(res.data.day4workout3sets){
+                    setWorkoutDay4Sets3(res.data.day4workout3sets)
+                }
+                // Day 4 Workout 4
+                if(res.data.day4workout4){
+                    setWorkoutDay4Name4(res.data.day4workout4)
+                }
+                if(res.data.day4workout4reps){
+                    setWorkoutDay4Reps4(res.data.day4workout4reps)
+                }
+                if(res.data.day4workout4sets){
+                    setWorkoutDay4Sets4(res.data.day4workout4sets)
+                }
+                // Day 4 Workout 5
+                if(res.data.day4workout5){
+                    setWorkoutDay4Name5(res.data.day4workout5)
+                }
+                if(res.data.day4workout5reps){
+                    setWorkoutDay4Reps5(res.data.day4workout5reps)
+                }
+                if(res.data.day4workout5sets){
+                    setWorkoutDay4Sets5(res.data.day4workout5sets)
+                }
+                // Day 5 Workout 1
+                if(res.data.day5workout1){
+                    setWorkoutDay5Name1(res.data.day5workout1)
+                }
+                if(res.data.day5workout1reps){
+                    setWorkoutDay5Reps1(res.data.day5workout1reps)
+                }
+                if(res.data.day5workout1sets){
+                    setWorkoutDay5Sets1(res.data.day5workout1sets)
+                }
+                // Day 5 Workout 2
+                if(res.data.day5workout2){
+                    setWorkoutDay5Name1(res.data.day5workout2)
+                }
+                if(res.data.day5workout2reps){
+                    setWorkoutDay5Reps2(res.data.day5workout2reps)
+                }
+                if(res.data.day5workout2sets){
+                    setWorkoutDay5Sets2(res.data.day5workout2sets)
+                }
+                // Day 5 Workout 3
+                if(res.data.day5workout3){
+                    setWorkoutDay5Name3(res.data.day5workout3)
+                }
+                if(res.data.day5workout3reps){
+                    setWorkoutDay5Reps3(res.data.day5workout3reps)
+                }
+                if(res.data.day5workout3sets){
+                    setWorkoutDay5Sets3(res.data.day5workout3sets)
+                }
+                // Day 5 Workout 4
+                if(res.data.day5workout4){
+                    setWorkoutDay4Name4(res.data.day5workout4)
+                }
+                if(res.data.day5workout4reps){
+                    setWorkoutDay5Reps4(res.data.day5workout4reps)
+                }
+                if(res.data.day4workout4sets){
+                    setWorkoutDay4Sets4(res.data.day4workout4sets)
+                }
+                // Day 5 Workout 5
+                if(res.data.day5workout5){
+                    setWorkoutDay5Name5(res.data.day5workout5)
+                }
+                if(res.data.day5workout5reps){
+                    setWorkoutDay5Reps5(res.data.day5workout5reps)
+                }
+                if(res.data.day5workout5sets){
+                    setWorkoutDay5Sets5(res.data.day5workout5sets)
+                }
             })
             setOnLoad(true)
         }else{
@@ -853,9 +1101,6 @@ function Workouts(props){
     function editDay5Workout5(){
         setWorkout5Day5Edit(true)
     }
-    
-
-    console.log(data)
     return(
         <div>
             <h1>Workouts</h1>
@@ -1090,9 +1335,7 @@ function Workouts(props){
                         <Button onClick={() => editDay1Workout5()}className={style.button}>Edit</Button>
                     )}
                 </div>
-
             </div>
-
         </div>
     )
 }
