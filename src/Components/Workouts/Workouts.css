@@ -6,12 +6,12 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  background-color: salmon;
 }
 
 .workout {
-  border: 2px solid black;
-  border-bottom: 1px solid black;
+  border: 4px solid black;
+  background-color: lightgray;
+  border-bottom: 3px solid black;
   width: 153px;
 }
 
@@ -22,6 +22,8 @@
 
 .text {
   width: 100%;
+  text-decoration: underline;
+  font-size: large;
   text-align: center;
 }
 

@@ -6,7 +6,6 @@ import './App.css';
 function App(props) {
   return (
     <>
-    <Nav/>
     {route}
     </>
   );

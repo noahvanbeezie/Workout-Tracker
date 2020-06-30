@@ -1,0 +1,25 @@
+.login {
+  border: crimson 5px solid;
+  width: 30vw;
+  margin-left: 35vw;
+  margin-top: 150px;
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+  font-size: larger;
+}
+
+.textHolder {
+  width: 100%;
+  text-align: center;
+}
+
+.inputHolder {
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=Auth.css.map */

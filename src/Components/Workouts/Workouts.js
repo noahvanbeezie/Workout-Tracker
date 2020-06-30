@@ -10,21 +10,27 @@ import './Workouts.css'
 const styles = makeStyles({
     downButton:{
         border:'0.5px solid black',
-        backgroundColor:'#dd2c00',
+        borderRight:'1px solid black',
+        borderRadius:'0px',
+        backgroundColor:'#FF0000',
         '&:hover':{
-            backgroundColor:'#bf360c'
+            backgroundColor:'#FF6347'
         } 
     },
     upButton:{
         position:'relative',
         right:'-25px',
         border:'0.5px solid black',
-        backgroundColor:'#dd2c00',
+        borderLeft:'1px solid black',
+        borderRadius:'0px',
+        backgroundColor:'#228B22',
         '&:hover':{
-            backgroundColor:'#bf360c'
+            backgroundColor:'#32CD32'
         } 
     },
     button:{
+        position:'Relative',
+        bottom:'0px',
         width:'100%',
         marginTop:'10px',
         backgroundColor:'#dd2c00',
@@ -1294,8 +1300,12 @@ function Workouts(props){
     }
     return(
         <div>
-            <h1>Workouts</h1>
-            <p>Username:{username}</p>
+            <div className='pageTitle'>
+                <h1>Workouts</h1>
+                <div className='user'>
+                    <p>Username:{username}</p>
+                </div>
+            </div>
             <h2 className='day'>Day 1:</h2>
             <div className='workoutHolder'>
                 <div className='workout'>
