@@ -907,7 +907,7 @@ function Workouts(props){
         })
     }
     function editDay3Workout4(){
-        setWorkout3Day4Edit(true)
+        setWorkout4Day3Edit(true)
     }
     // Workout 5 Day 3
     let day3Name5 = e =>{
@@ -1534,6 +1534,930 @@ function Workouts(props){
                         <Button onClick={() => updateDay1Workout5()}className={style.button}>Submit</Button>
                         ):(
                         <Button onClick={() => editDay1Workout5()}className={style.button}>Edit</Button>
+                    )}
+                </div>
+            </div>
+            <h2 className='day'>Day 2:</h2>
+            <div className='workoutHolder'>
+                <div className='workout'>
+                    <div>
+                        {workoutDay2Name1 === '' ? (
+                            <h3 className='text'>Workout 1:</h3>
+                        ):(
+                            <h3 className='text'>{workoutDay2Name1}</h3>
+                        )}
+                        {workout1Day2Edit === true ? (
+                            <input 
+                                placeholder='Change Name:'
+                                type='text' 
+                                maxLength={30} 
+                                onChange={day2Name1}/>
+                        ):(
+                            null
+                        )}
+                    </div>
+                    <div>
+                        <p className='text'>Reps:{workoutDay2Reps1}</p>
+                        {workout1Day2Edit === true ? (
+                        <div className='buttonHolder'>
+                            <Button onClick={() => day2Reps1Down()} className={style.downButton}>{'<<<'}</Button>
+                            <Button onClick={() => day2Reps1Up()} className={style.upButton}>{'>>>'}</Button>
+                        </div>
+                        ):(
+                            null
+                        )}
+                    </div>
+                    <div>
+                        <p className='text'>Sets:{workoutDay2Sets1}</p>
+                        {workout1Day2Edit === true ? (
+                        <div className='buttonHolder'>
+                            <Button onClick={() => day2Sets1Down()} className={style.downButton}>{'<<<'}</Button>
+                            <Button onClick={() => day2Sets1Up()} className={style.upButton}>{'>>>'}</Button>
+                        </div>
+                        ):(
+                            null
+                        )}
+                    </div>
+                    {workout1Day2Edit === true ? (
+                        <Button onClick={() => updateDay2Workout1()}className={style.button}>Submit</Button>
+                        ):(
+                        <Button onClick={() => editDay2Workout1()}className={style.button}>Edit</Button>
+                    )}
+                </div>
+                <div className='workout'>
+                    <div>
+                        {workoutDay2Name2 === '' ? (
+                            <h3 className='text'>Workout 2:</h3>
+                        ):(
+                            <h3 className='text'>{workoutDay2Name2}</h3>
+                        )}
+                        {workout2Day2Edit === true ? (
+                            <input
+                                placeholder='Change Name:'
+                                type='text' 
+                                maxLength={30} 
+                                onChange={day2Name2}/>
+
+                        ):(
+                            null
+                        )}
+                    </div>
+                    <div>
+                        <p className='text'>Reps:{workoutDay2Reps2}</p>
+                        {workout2Day2Edit === true ? (
+                            <div className='buttonHolder'>
+                                <Button onClick={() => day2Reps2Down()} className={style.downButton}>{'<<<'}</Button>
+                                <Button onClick={() => day2Reps2Up()} className={style.upButton}>{'>>>'}</Button>
+                         </div>
+
+                        ):(
+                            null
+                        )}
+                    </div>
+                    <div>
+                        <p className='text'>Sets:{workoutDay2Sets2}</p>
+                        {workout2Day2Edit === true ? (
+                        <div className='buttonHolder'>
+                            <Button onClick={() => day2Sets2Down()} className={style.downButton}>{'<<<'}</Button>
+                            <Button onClick={() => day2Sets2Up()} className={style.upButton}>{'>>>'}</Button>
+                        </div>
+                        ):(
+                            null
+                        )}
+                    </div>
+                        {workout2Day2Edit === true ? (
+                        <Button onClick={() => updateDay2Workout2()}className={style.button}>Submit</Button>
+                        ):(
+                        <Button onClick={() => editDay2Workout2()}className={style.button}>Edit</Button>
+                        )}
+                </div>
+                <div className='workout'>
+                    <div>
+                        {workoutDay2Name3 === '' ? (
+                            <h3 className='text'>Workout 3:</h3>
+                        ):(
+                            <h3 className='text'>{workoutDay2Name3}</h3>
+                        )}
+                        {workout3Day2Edit === true ? (
+                            <input 
+                                placeholder='Change Name:'
+                                type='text' 
+                                maxLength={30} 
+                                onChange={day2Name3}/>
+                        ):(
+                            null
+                        )}
+                    </div>
+                    <div>
+                        <p className='text'>Reps:{workoutDay2Reps3}</p>
+                        {workout3Day2Edit === true ? (
+                        <div className='buttonHolder'>
+                            <Button onClick={() => day2Reps3Down()} className={style.downButton}>{'<<<'}</Button>
+                            <Button onClick={() => day2Reps3Up()} className={style.upButton}>{'>>>'}</Button>
+                        </div>
+                        ):(
+                            null
+                        )}
+                    </div>
+                    <div>
+                        <p className='text'>Sets:{workoutDay2Sets3}</p>
+                        {workout3Day2Edit === true ? (
+                        <div className='buttonHolder'>
+                            <Button onClick={() => day2Sets3Down()} className={style.downButton}>{'<<<'}</Button>
+                            <Button onClick={() => day2Sets3Up()} className={style.upButton}>{'>>>'}</Button>
+                        </div>
+                        ):(
+                            null
+                        )}
+                    </div>
+                    {workout3Day2Edit === true ? (
+                        <Button onClick={() => updateDay2Workout3()}className={style.button}>Submit</Button>
+                        ):(
+                        <Button onClick={() => editDay2Workout3()}className={style.button}>Edit</Button>
+                    )}
+                </div>
+                <div className='workout'>
+                    <div>
+                        {workoutDay2Name4 === '' ? (
+                            <h3 className='text'>Workout 4:</h3>
+                        ):(
+                            <h3 className='text'>{workoutDay2Name4}</h3>
+                        )}
+                        {workout4Day2Edit === true ? (
+                            <input
+                                placeholder='Change Name:'
+                                type='text' 
+                                maxLength={30} 
+                                onChange={day2Name4}/>
+                        ):(
+                            null
+                        )}
+
+                    </div>
+                    <div>
+                        <p className='text'>Reps:{workoutDay2Reps4}</p>
+                        {workout4Day2Edit === true ? (
+                        <div className='buttonHolder'>
+                            <Button onClick={() => day2Reps4Down()} className={style.downButton}>{'<<<'}</Button>
+                            <Button onClick={() => day2Reps4Up()} className={style.upButton}>{'>>>'}</Button>
+                        </div>
+                        ):(
+                            null
+                        )}
+                    </div>
+                    <div>
+                        <p className='text'>Sets:{workoutDay2Sets4}</p>
+                        {workout4Day2Edit === true ? (
+                        <div className='buttonHolder'>
+                            <Button onClick={() => day2Sets4Down()} className={style.downButton}>{'<<<'}</Button>
+                            <Button onClick={() => day2Sets4Up()} className={style.upButton}>{'>>>'}</Button>
+                        </div>
+                        ):(
+                            null
+                        )}
+                    </div>
+                    {workout4Day2Edit === true ? (
+                        <Button onClick={() => updateDay2Workout4()}className={style.button}>Submit</Button>
+                        ):(
+                        <Button onClick={() => editDay2Workout4()}className={style.button}>Edit</Button>
+                    )}
+                </div>
+                <div className='workout'>
+                    <div>
+                        {workoutDay2Name5 === '' ? (
+                            <h3 className='text'>Workout 5:</h3>
+                        ):(
+                            <h3 className='text'>{workoutDay2Name5}</h3>
+                        )}
+                        {workout5Day2Edit === true ? (
+                            <input 
+                                placeholder='Change Name:'
+                                type='text' 
+                                maxLength={30} 
+                                onChange={day2Name5}/>
+                        ):(
+                            null
+                        )}
+                    </div>
+                    <div>
+                        <p className='text'>Reps:{workoutDay2Reps5}</p>
+                        {workout5Day2Edit === true ? (
+                        <div className='buttonHolder'>
+                            <Button onClick={() => day2Reps5Down()} className={style.downButton}>{'<<<'}</Button>
+                            <Button onClick={() => day2Reps5Up()} className={style.upButton}>{'>>>'}</Button>
+                        </div>
+                        ):(
+                            null
+                        )}
+                    </div>
+                    <div>
+                        <p className='text'>Sets:{workoutDay2Sets5}</p>
+                        {workout5Day2Edit === true ? (
+                        <div className='buttonHolder'>
+                            <Button onClick={() => day2Sets5Down()} className={style.downButton}>{'<<<'}</Button>
+                            <Button onClick={() => day2Sets5Up()} className={style.upButton}>{'>>>'}</Button>
+                        </div>
+                        ):(
+                            null
+                        )}
+                    </div>
+                    {workout5Day2Edit === true ? (
+                        <Button onClick={() => updateDay2Workout5()}className={style.button}>Submit</Button>
+                        ):(
+                        <Button onClick={() => editDay2Workout5()}className={style.button}>Edit</Button>
+                    )}
+                </div>
+            </div>
+            <h2 className='day'>Day 3:</h2>
+            <div className='workoutHolder'>
+                <div className='workout'>
+                    <div>
+                        {workoutDay3Name1 === '' ? (
+                            <h3 className='text'>Workout 1:</h3>
+                        ):(
+                            <h3 className='text'>{workoutDay3Name1}</h3>
+                        )}
+                        {workout1Day3Edit === true ? (
+                            <input 
+                                placeholder='Change Name:'
+                                type='text' 
+                                maxLength={30} 
+                                onChange={day3Name1}/>
+                        ):(
+                            null
+                        )}
+                    </div>
+                    <div>
+                        <p className='text'>Reps:{workoutDay3Reps1}</p>
+                        {workout1Day3Edit === true ? (
+                        <div className='buttonHolder'>
+                            <Button onClick={() => day3Reps1Down()} className={style.downButton}>{'<<<'}</Button>
+                            <Button onClick={() => day3Reps1Up()} className={style.upButton}>{'>>>'}</Button>
+                        </div>
+                        ):(
+                            null
+                        )}
+                    </div>
+                    <div>
+                        <p className='text'>Sets:{workoutDay3Sets1}</p>
+                        {workout1Day3Edit === true ? (
+                        <div className='buttonHolder'>
+                            <Button onClick={() => day3Sets1Down()} className={style.downButton}>{'<<<'}</Button>
+                            <Button onClick={() => day3Sets1Up()} className={style.upButton}>{'>>>'}</Button>
+                        </div>
+                        ):(
+                            null
+                        )}
+                    </div>
+                    {workout1Day3Edit === true ? (
+                        <Button onClick={() => updateDay3Workout1()}className={style.button}>Submit</Button>
+                        ):(
+                        <Button onClick={() => editDay3Workout1()}className={style.button}>Edit</Button>
+                    )}
+                </div>
+                <div className='workout'>
+                    <div>
+                        {workoutDay2Name3 === '' ? (
+                            <h3 className='text'>Workout 2:</h3>
+                        ):(
+                            <h3 className='text'>{workoutDay3Name2}</h3>
+                        )}
+                        {workout3Day2Edit === true ? (
+                            <input
+                                placeholder='Change Name:'
+                                type='text' 
+                                maxLength={30} 
+                                onChange={day3Name2}/>
+
+                        ):(
+                            null
+                        )}
+                    </div>
+                    <div>
+                        <p className='text'>Reps:{workoutDay3Reps2}</p>
+                        {workout2Day3Edit === true ? (
+                            <div className='buttonHolder'>
+                                <Button onClick={() => day3Reps2Down()} className={style.downButton}>{'<<<'}</Button>
+                                <Button onClick={() => day3Reps2Up()} className={style.upButton}>{'>>>'}</Button>
+                         </div>
+
+                        ):(
+                            null
+                        )}
+                    </div>
+                    <div>
+                        <p className='text'>Sets:{workoutDay3Sets2}</p>
+                        {workout2Day3Edit === true ? (
+                        <div className='buttonHolder'>
+                            <Button onClick={() => day3Sets2Down()} className={style.downButton}>{'<<<'}</Button>
+                            <Button onClick={() => day3Sets2Up()} className={style.upButton}>{'>>>'}</Button>
+                        </div>
+                        ):(
+                            null
+                        )}
+                    </div>
+                        {workout2Day3Edit === true ? (
+                        <Button onClick={() => updateDay3Workout2()}className={style.button}>Submit</Button>
+                        ):(
+                        <Button onClick={() => editDay3Workout2()}className={style.button}>Edit</Button>
+                        )}
+                </div>
+                <div className='workout'>
+                    <div>
+                        {workoutDay3Name3 === '' ? (
+                            <h3 className='text'>Workout 3:</h3>
+                        ):(
+                            <h3 className='text'>{workoutDay3Name3}</h3>
+                        )}
+                        {workout3Day3Edit === true ? (
+                            <input 
+                                placeholder='Change Name:'
+                                type='text' 
+                                maxLength={30} 
+                                onChange={day3Name3}/>
+                        ):(
+                            null
+                        )}
+                    </div>
+                    <div>
+                        <p className='text'>Reps:{workoutDay3Reps3}</p>
+                        {workout3Day3Edit === true ? (
+                        <div className='buttonHolder'>
+                            <Button onClick={() => day3Reps3Down()} className={style.downButton}>{'<<<'}</Button>
+                            <Button onClick={() => day3Reps3Up()} className={style.upButton}>{'>>>'}</Button>
+                        </div>
+                        ):(
+                            null
+                        )}
+                    </div>
+                    <div>
+                        <p className='text'>Sets:{workoutDay3Sets3}</p>
+                        {workout3Day3Edit === true ? (
+                        <div className='buttonHolder'>
+                            <Button onClick={() => day3Sets3Down()} className={style.downButton}>{'<<<'}</Button>
+                            <Button onClick={() => day3Sets3Up()} className={style.upButton}>{'>>>'}</Button>
+                        </div>
+                        ):(
+                            null
+                        )}
+                    </div>
+                    {workout3Day3Edit === true ? (
+                        <Button onClick={() => updateDay3Workout3()}className={style.button}>Submit</Button>
+                        ):(
+                        <Button onClick={() => editDay3Workout3()}className={style.button}>Edit</Button>
+                    )}
+                </div>
+                <div className='workout'>
+                    <div>
+                        {workoutDay3Name4 === '' ? (
+                            <h3 className='text'>Workout 4:</h3>
+                        ):(
+                            <h3 className='text'>{workoutDay3Name4}</h3>
+                        )}
+                        {workout4Day3Edit === true ? (
+                            <input
+                                placeholder='Change Name:'
+                                type='text' 
+                                maxLength={30} 
+                                onChange={day3Name4}/>
+                        ):(
+                            null
+                        )}
+
+                    </div>
+                    <div>
+                        <p className='text'>Reps:{workoutDay3Reps4}</p>
+                        {workout4Day3Edit === true ? (
+                        <div className='buttonHolder'>
+                            <Button onClick={() => day3Reps4Down()} className={style.downButton}>{'<<<'}</Button>
+                            <Button onClick={() => day3Reps4Up()} className={style.upButton}>{'>>>'}</Button>
+                        </div>
+                        ):(
+                            null
+                        )}
+                    </div>
+                    <div>
+                        <p className='text'>Sets:{workoutDay3Sets4}</p>
+                        {workout4Day3Edit === true ? (
+                        <div className='buttonHolder'>
+                            <Button onClick={() => day3Sets4Down()} className={style.downButton}>{'<<<'}</Button>
+                            <Button onClick={() => day3Sets4Up()} className={style.upButton}>{'>>>'}</Button>
+                        </div>
+                        ):(
+                            null
+                        )}
+                    </div>
+                    {workout4Day3Edit === true ? (
+                        <Button onClick={() => updateDay3Workout4()}className={style.button}>Submit</Button>
+                        ):(
+                        <Button onClick={() => editDay3Workout4()}className={style.button}>Edit</Button>
+                    )}
+                </div>
+                <div className='workout'>
+                    <div>
+                        {workoutDay3Name5 === '' ? (
+                            <h3 className='text'>Workout 5:</h3>
+                        ):(
+                            <h3 className='text'>{workoutDay3Name5}</h3>
+                        )}
+                        {workout5Day3Edit === true ? (
+                            <input 
+                                placeholder='Change Name:'
+                                type='text' 
+                                maxLength={30} 
+                                onChange={day3Name5}/>
+                        ):(
+                            null
+                        )}
+                    </div>
+                    <div>
+                        <p className='text'>Reps:{workoutDay3Reps5}</p>
+                        {workout5Day3Edit === true ? (
+                        <div className='buttonHolder'>
+                            <Button onClick={() => day3Reps5Down()} className={style.downButton}>{'<<<'}</Button>
+                            <Button onClick={() => day3Reps5Up()} className={style.upButton}>{'>>>'}</Button>
+                        </div>
+                        ):(
+                            null
+                        )}
+                    </div>
+                    <div>
+                        <p className='text'>Sets:{workoutDay3Sets5}</p>
+                        {workout5Day3Edit === true ? (
+                        <div className='buttonHolder'>
+                            <Button onClick={() => day3Sets5Down()} className={style.downButton}>{'<<<'}</Button>
+                            <Button onClick={() => day3Sets5Up()} className={style.upButton}>{'>>>'}</Button>
+                        </div>
+                        ):(
+                            null
+                        )}
+                    </div>
+                    {workout5Day3Edit === true ? (
+                        <Button onClick={() => updateDay3Workout5()}className={style.button}>Submit</Button>
+                        ):(
+                        <Button onClick={() => editDay3Workout5()}className={style.button}>Edit</Button>
+                    )}
+                </div>
+            </div>
+            <h2 className='day'>Day 4:</h2>
+            <div className='workoutHolder'>
+                <div className='workout'>
+                    <div>
+                        {workoutDay4Name1 === '' ? (
+                            <h3 className='text'>Workout 1:</h3>
+                        ):(
+                            <h3 className='text'>{workoutDay4Name1}</h3>
+                        )}
+                        {workout1Day4Edit === true ? (
+                            <input 
+                                placeholder='Change Name:'
+                                type='text' 
+                                maxLength={30} 
+                                onChange={day4Name1}/>
+                        ):(
+                            null
+                        )}
+                    </div>
+                    <div>
+                        <p className='text'>Reps:{workoutDay4Reps1}</p>
+                        {workout1Day4Edit === true ? (
+                        <div className='buttonHolder'>
+                            <Button onClick={() => day4Reps1Down()} className={style.downButton}>{'<<<'}</Button>
+                            <Button onClick={() => day4Reps1Up()} className={style.upButton}>{'>>>'}</Button>
+                        </div>
+                        ):(
+                            null
+                        )}
+                    </div>
+                    <div>
+                        <p className='text'>Sets:{workoutDay4Sets1}</p>
+                        {workout1Day4Edit === true ? (
+                        <div className='buttonHolder'>
+                            <Button onClick={() => day4Sets1Down()} className={style.downButton}>{'<<<'}</Button>
+                            <Button onClick={() => day4Sets1Up()} className={style.upButton}>{'>>>'}</Button>
+                        </div>
+                        ):(
+                            null
+                        )}
+                    </div>
+                    {workout1Day4Edit === true ? (
+                        <Button onClick={() => updateDay4Workout1()}className={style.button}>Submit</Button>
+                        ):(
+                        <Button onClick={() => editDay4Workout1()}className={style.button}>Edit</Button>
+                    )}
+                </div>
+                <div className='workout'>
+                    <div>
+                        {workoutDay4Name2 === '' ? (
+                            <h3 className='text'>Workout 2:</h3>
+                        ):(
+                            <h3 className='text'>{workoutDay4Name2}</h3>
+                        )}
+                        {workout2Day4Edit === true ? (
+                            <input
+                                placeholder='Change Name:'
+                                type='text' 
+                                maxLength={30} 
+                                onChange={day4Name2}/>
+
+                        ):(
+                            null
+                        )}
+                    </div>
+                    <div>
+                        <p className='text'>Reps:{workoutDay4Reps2}</p>
+                        {workout2Day4Edit === true ? (
+                            <div className='buttonHolder'>
+                                <Button onClick={() => day4Reps2Down()} className={style.downButton}>{'<<<'}</Button>
+                                <Button onClick={() => day4Reps2Up()} className={style.upButton}>{'>>>'}</Button>
+                         </div>
+
+                        ):(
+                            null
+                        )}
+                    </div>
+                    <div>
+                        <p className='text'>Sets:{workoutDay4Sets2}</p>
+                        {workout2Day4Edit === true ? (
+                        <div className='buttonHolder'>
+                            <Button onClick={() => day4Sets2Down()} className={style.downButton}>{'<<<'}</Button>
+                            <Button onClick={() => day4Sets2Up()} className={style.upButton}>{'>>>'}</Button>
+                        </div>
+                        ):(
+                            null
+                        )}
+                    </div>
+                        {workout2Day4Edit === true ? (
+                        <Button onClick={() => updateDay4Workout2()}className={style.button}>Submit</Button>
+                        ):(
+                        <Button onClick={() => editDay4Workout2()}className={style.button}>Edit</Button>
+                        )}
+                </div>
+                <div className='workout'>
+                    <div>
+                        {workoutDay4Name3 === '' ? (
+                            <h3 className='text'>Workout 3:</h3>
+                        ):(
+                            <h3 className='text'>{workoutDay4Name3}</h3>
+                        )}
+                        {workout3Day4Edit === true ? (
+                            <input 
+                                placeholder='Change Name:'
+                                type='text' 
+                                maxLength={30} 
+                                onChange={day4Name3}/>
+                        ):(
+                            null
+                        )}
+                    </div>
+                    <div>
+                        <p className='text'>Reps:{workoutDay4Reps3}</p>
+                        {workout3Day4Edit === true ? (
+                        <div className='buttonHolder'>
+                            <Button onClick={() => day4Reps3Down()} className={style.downButton}>{'<<<'}</Button>
+                            <Button onClick={() => day4Reps3Up()} className={style.upButton}>{'>>>'}</Button>
+                        </div>
+                        ):(
+                            null
+                        )}
+                    </div>
+                    <div>
+                        <p className='text'>Sets:{workoutDay4Sets3}</p>
+                        {workout3Day4Edit === true ? (
+                        <div className='buttonHolder'>
+                            <Button onClick={() => day4Sets3Down()} className={style.downButton}>{'<<<'}</Button>
+                            <Button onClick={() => day4Sets3Up()} className={style.upButton}>{'>>>'}</Button>
+                        </div>
+                        ):(
+                            null
+                        )}
+                    </div>
+                    {workout3Day4Edit === true ? (
+                        <Button onClick={() => updateDay4Workout3()}className={style.button}>Submit</Button>
+                        ):(
+                        <Button onClick={() => editDay4Workout3()}className={style.button}>Edit</Button>
+                    )}
+                </div>
+                <div className='workout'>
+                    <div>
+                        {workoutDay4Name4 === '' ? (
+                            <h3 className='text'>Workout 4:</h3>
+                        ):(
+                            <h3 className='text'>{workoutDay4Name4}</h3>
+                        )}
+                        {workout4Day4Edit === true ? (
+                            <input
+                                placeholder='Change Name:'
+                                type='text' 
+                                maxLength={30} 
+                                onChange={day4Name4}/>
+                        ):(
+                            null
+                        )}
+
+                    </div>
+                    <div>
+                        <p className='text'>Reps:{workoutDay4Reps4}</p>
+                        {workout4Day4Edit === true ? (
+                        <div className='buttonHolder'>
+                            <Button onClick={() => day4Reps4Down()} className={style.downButton}>{'<<<'}</Button>
+                            <Button onClick={() => day4Reps4Up()} className={style.upButton}>{'>>>'}</Button>
+                        </div>
+                        ):(
+                            null
+                        )}
+                    </div>
+                    <div>
+                        <p className='text'>Sets:{workoutDay4Sets4}</p>
+                        {workout4Day4Edit === true ? (
+                        <div className='buttonHolder'>
+                            <Button onClick={() => day4Sets4Down()} className={style.downButton}>{'<<<'}</Button>
+                            <Button onClick={() => day4Sets4Up()} className={style.upButton}>{'>>>'}</Button>
+                        </div>
+                        ):(
+                            null
+                        )}
+                    </div>
+                    {workout4Day4Edit === true ? (
+                        <Button onClick={() => updateDay4Workout4()}className={style.button}>Submit</Button>
+                        ):(
+                        <Button onClick={() => editDay4Workout4()}className={style.button}>Edit</Button>
+                    )}
+                </div>
+                <div className='workout'>
+                    <div>
+                        {workoutDay4Name5 === '' ? (
+                            <h3 className='text'>Workout 5:</h3>
+                        ):(
+                            <h3 className='text'>{workoutDay4Name5}</h3>
+                        )}
+                        {workout5Day4Edit === true ? (
+                            <input 
+                                placeholder='Change Name:'
+                                type='text' 
+                                maxLength={30} 
+                                onChange={day4Name5}/>
+                        ):(
+                            null
+                        )}
+                    </div>
+                    <div>
+                        <p className='text'>Reps:{workoutDay4Reps5}</p>
+                        {workout5Day4Edit === true ? (
+                        <div className='buttonHolder'>
+                            <Button onClick={() => day4Reps5Down()} className={style.downButton}>{'<<<'}</Button>
+                            <Button onClick={() => day4Reps5Up()} className={style.upButton}>{'>>>'}</Button>
+                        </div>
+                        ):(
+                            null
+                        )}
+                    </div>
+                    <div>
+                        <p className='text'>Sets:{workoutDay4Sets5}</p>
+                        {workout5Day4Edit === true ? (
+                        <div className='buttonHolder'>
+                            <Button onClick={() => day4Sets5Down()} className={style.downButton}>{'<<<'}</Button>
+                            <Button onClick={() => day4Sets5Up()} className={style.upButton}>{'>>>'}</Button>
+                        </div>
+                        ):(
+                            null
+                        )}
+                    </div>
+                    {workout5Day4Edit === true ? (
+                        <Button onClick={() => updateDay4Workout5()}className={style.button}>Submit</Button>
+                        ):(
+                        <Button onClick={() => editDay4Workout5()}className={style.button}>Edit</Button>
+                    )}
+                </div>
+            </div>
+            <h2 className='day'>Day 5:</h2>
+            <div className='workoutHolder'>
+                <div className='workout'>
+                    <div>
+                        {workoutDay5Name1 === '' ? (
+                            <h3 className='text'>Workout 1:</h3>
+                        ):(
+                            <h3 className='text'>{workoutDay5Name1}</h3>
+                        )}
+                        {workout1Day5Edit === true ? (
+                            <input 
+                                placeholder='Change Name:'
+                                type='text' 
+                                maxLength={30} 
+                                onChange={day5Name1}/>
+                        ):(
+                            null
+                        )}
+                    </div>
+                    <div>
+                        <p className='text'>Reps:{workoutDay5Reps1}</p>
+                        {workout1Day5Edit === true ? (
+                        <div className='buttonHolder'>
+                            <Button onClick={() => day5Reps1Down()} className={style.downButton}>{'<<<'}</Button>
+                            <Button onClick={() => day5Reps1Up()} className={style.upButton}>{'>>>'}</Button>
+                        </div>
+                        ):(
+                            null
+                        )}
+                    </div>
+                    <div>
+                        <p className='text'>Sets:{workoutDay5Sets1}</p>
+                        {workout1Day5Edit === true ? (
+                        <div className='buttonHolder'>
+                            <Button onClick={() => day5Sets1Down()} className={style.downButton}>{'<<<'}</Button>
+                            <Button onClick={() => day5Sets1Up()} className={style.upButton}>{'>>>'}</Button>
+                        </div>
+                        ):(
+                            null
+                        )}
+                    </div>
+                    {workout1Day5Edit === true ? (
+                        <Button onClick={() => updateDay5Workout1()}className={style.button}>Submit</Button>
+                        ):(
+                        <Button onClick={() => editDay5Workout1()}className={style.button}>Edit</Button>
+                    )}
+                </div>
+                <div className='workout'>
+                    <div>
+                        {workoutDay5Name2 === '' ? (
+                            <h3 className='text'>Workout 2:</h3>
+                        ):(
+                            <h3 className='text'>{workoutDay5Name2}</h3>
+                        )}
+                        {workout2Day5Edit === true ? (
+                            <input
+                                placeholder='Change Name:'
+                                type='text' 
+                                maxLength={30} 
+                                onChange={day5Name2}/>
+
+                        ):(
+                            null
+                        )}
+                    </div>
+                    <div>
+                        <p className='text'>Reps:{workoutDay5Reps2}</p>
+                        {workout2Day5Edit === true ? (
+                            <div className='buttonHolder'>
+                                <Button onClick={() => day5Reps2Down()} className={style.downButton}>{'<<<'}</Button>
+                                <Button onClick={() => day5Reps2Up()} className={style.upButton}>{'>>>'}</Button>
+                         </div>
+
+                        ):(
+                            null
+                        )}
+                    </div>
+                    <div>
+                        <p className='text'>Sets:{workoutDay5Sets2}</p>
+                        {workout2Day5Edit === true ? (
+                        <div className='buttonHolder'>
+                            <Button onClick={() => day5Sets2Down()} className={style.downButton}>{'<<<'}</Button>
+                            <Button onClick={() => day5Sets2Up()} className={style.upButton}>{'>>>'}</Button>
+                        </div>
+                        ):(
+                            null
+                        )}
+                    </div>
+                        {workout2Day5Edit === true ? (
+                        <Button onClick={() => updateDay5Workout2()}className={style.button}>Submit</Button>
+                        ):(
+                        <Button onClick={() => editDay5Workout2()}className={style.button}>Edit</Button>
+                        )}
+                </div>
+                <div className='workout'>
+                    <div>
+                        {workoutDay5Name3 === '' ? (
+                            <h3 className='text'>Workout 3:</h3>
+                        ):(
+                            <h3 className='text'>{workoutDay5Name3}</h3>
+                        )}
+                        {workout3Day5Edit === true ? (
+                            <input 
+                                placeholder='Change Name:'
+                                type='text' 
+                                maxLength={30} 
+                                onChange={day5Name3}/>
+                        ):(
+                            null
+                        )}
+                    </div>
+                    <div>
+                        <p className='text'>Reps:{workoutDay5Reps3}</p>
+                        {workout3Day5Edit === true ? (
+                        <div className='buttonHolder'>
+                            <Button onClick={() => day5Reps3Down()} className={style.downButton}>{'<<<'}</Button>
+                            <Button onClick={() => day5Reps3Up()} className={style.upButton}>{'>>>'}</Button>
+                        </div>
+                        ):(
+                            null
+                        )}
+                    </div>
+                    <div>
+                        <p className='text'>Sets:{workoutDay5Sets3}</p>
+                        {workout3Day5Edit === true ? (
+                        <div className='buttonHolder'>
+                            <Button onClick={() => day5Sets3Down()} className={style.downButton}>{'<<<'}</Button>
+                            <Button onClick={() => day5Sets3Up()} className={style.upButton}>{'>>>'}</Button>
+                        </div>
+                        ):(
+                            null
+                        )}
+                    </div>
+                    {workout3Day5Edit === true ? (
+                        <Button onClick={() => updateDay5Workout3()}className={style.button}>Submit</Button>
+                        ):(
+                        <Button onClick={() => editDay5Workout3()}className={style.button}>Edit</Button>
+                    )}
+                </div>
+                <div className='workout'>
+                    <div>
+                        {workoutDay5Name4 === '' ? (
+                            <h3 className='text'>Workout 4:</h3>
+                        ):(
+                            <h3 className='text'>{workoutDay5Name4}</h3>
+                        )}
+                        {workout4Day5Edit === true ? (
+                            <input
+                                placeholder='Change Name:'
+                                type='text' 
+                                maxLength={30} 
+                                onChange={day5Name4}/>
+                        ):(
+                            null
+                        )}
+
+                    </div>
+                    <div>
+                        <p className='text'>Reps:{workoutDay5Reps4}</p>
+                        {workout4Day5Edit === true ? (
+                        <div className='buttonHolder'>
+                            <Button onClick={() => day5Reps4Down()} className={style.downButton}>{'<<<'}</Button>
+                            <Button onClick={() => day5Reps4Up()} className={style.upButton}>{'>>>'}</Button>
+                        </div>
+                        ):(
+                            null
+                        )}
+                    </div>
+                    <div>
+                        <p className='text'>Sets:{workoutDay5Sets4}</p>
+                        {workout4Day5Edit === true ? (
+                        <div className='buttonHolder'>
+                            <Button onClick={() => day5Sets4Down()} className={style.downButton}>{'<<<'}</Button>
+                            <Button onClick={() => day5Sets4Up()} className={style.upButton}>{'>>>'}</Button>
+                        </div>
+                        ):(
+                            null
+                        )}
+                    </div>
+                    {workout4Day5Edit === true ? (
+                        <Button onClick={() => updateDay5Workout4()}className={style.button}>Submit</Button>
+                        ):(
+                        <Button onClick={() => editDay5Workout4()}className={style.button}>Edit</Button>
+                    )}
+                </div>
+                <div className='workout'>
+                    <div>
+                        {workoutDay5Name5 === '' ? (
+                            <h3 className='text'>Workout 5:</h3>
+                        ):(
+                            <h3 className='text'>{workoutDay5Name5}</h3>
+                        )}
+                        {workout5Day5Edit === true ? (
+                            <input 
+                                placeholder='Change Name:'
+                                type='text' 
+                                maxLength={30} 
+                                onChange={day5Name5}/>
+                        ):(
+                            null
+                        )}
+                    </div>
+                    <div>
+                        <p className='text'>Reps:{workoutDay5Reps5}</p>
+                        {workout5Day5Edit === true ? (
+                        <div className='buttonHolder'>
+                            <Button onClick={() => day5Reps5Down()} className={style.downButton}>{'<<<'}</Button>
+                            <Button onClick={() => day5Reps5Up()} className={style.upButton}>{'>>>'}</Button>
+                        </div>
+                        ):(
+                            null
+                        )}
+                    </div>
+                    <div>
+                        <p className='text'>Sets:{workoutDay5Sets5}</p>
+                        {workout5Day5Edit === true ? (
+                        <div className='buttonHolder'>
+                            <Button onClick={() => day5Sets5Down()} className={style.downButton}>{'<<<'}</Button>
+                            <Button onClick={() => day5Sets5Up()} className={style.upButton}>{'>>>'}</Button>
+                        </div>
+                        ):(
+                            null
+                        )}
+                    </div>
+                    {workout5Day5Edit === true ? (
+                        <Button onClick={() => updateDay5Workout5()}className={style.button}>Submit</Button>
+                        ):(
+                        <Button onClick={() => editDay5Workout5()}className={style.button}>Edit</Button>
                     )}
                 </div>
             </div>

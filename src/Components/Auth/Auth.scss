@@ -13,6 +13,11 @@
     width: 100%;
     text-align: center;
 }
+.authText{
+    :hover{
+        cursor: pointer;
+    }
+}
 .inputHolder{
     width: 100%;
     justify-content: center;

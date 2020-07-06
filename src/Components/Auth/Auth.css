@@ -16,6 +16,10 @@
   text-align: center;
 }
 
+.authText :hover {
+  cursor: pointer;
+}
+
 .inputHolder {
   width: 100%;
   -webkit-box-pack: center;

@@ -87,7 +87,7 @@ function Auth(props){
             </div>
             <Button className={style.button} onClick={login}>Login</Button>
             <div className='textHolder'>
-                <p onClick={() => authView()}>Register for an account here</p>
+                <p className='authText' onClick={() => authView()}>Register for an account here</p>
             </div>
         </div>
             ):(
@@ -105,8 +105,8 @@ function Auth(props){
                 <Input className={style.inputField} placeholder='Confirm Password' onChange={handleConfirmPassword}/>
             </div>
             <Button className={style.button} onClick={register}>Create Account</Button>
-            <div>
-                <p  className='textHolder' onClick={() => authView()}>Login Here</p>
+            <div className='textHolder'>
+                <p className='authText' onClick={() => authView()}>Login Here</p>
             </div>
         </div>
             )}
