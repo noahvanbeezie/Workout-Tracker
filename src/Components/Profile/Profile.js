@@ -3,8 +3,22 @@ import Button from '@material-ui/core/Button'
 import Input from '@material-ui/core/Input'
 import Axios from 'axios'
 import {connect} from 'react-redux'
+import {makeStyles} from '@material-ui/core/styles'
+import './Profile.css'
+
+const styles = makeStyles({
+    editButton:{
+        position:'relative',
+        width:'49.9%',
+        height:'50%',
+        top:'-658px',
+        backgroundColor:'Red',
+        borderRadius:'0px',
+    }
+})
 
 function Profile(props){
+    const style = styles()
     const [username,setUsername] = useState(props.reduxState.username)
     const [edit,setEdit] = useState(false)
     const [age,setAge] = useState(null)
@@ -110,53 +124,66 @@ function Profile(props){
 
     return(
         <div>
-            <h1>Profile</h1>
+            <h1 className='profileHeadText'>Profile</h1>
             {edit === false?(
-            <div>
-                <p>Username:{props.reduxState.username}</p>
-                {props.reduxState.age ? (
-                    <p>Age:{props.reduxState.age}</p>
-                ):(
-                    <p>No age associated</p>
-                )}
-                {props.reduxState.feet ? (
-                    <p>Height:{props.reduxState.feet}{props.reduxState.inches}</p>
-                ):(
-                    <p>No height associated</p>
-                )}
+                <div>
+                <p className='username'>Username:{props.reduxState.username}</p>
+                <div className='profileHolder'>
+                <div className='ageHolder'>
+                    {props.reduxState.age ? (
+                        <p className='profileText'>Age:{props.reduxState.age}</p>
+                    ):(
+                        <p className='profileText'>No age associated</p>
+                    )}
+                </div>
+                <div className='heightHolder'>
+                    {props.reduxState.feet ? (
+                        <p className='profileText'>Height:{props.reduxState.feet}{props.reduxState.inches}</p>
+                    ):(
+                        <p className='profileText'>No height associated</p>
+                    )}
+                </div>
+                <div className='weightHolder'>
                 {props.reduxState.weight ? (
-                    <p>Weight:{props.reduxState.weight}</p>
+                    <p className='profileText'>Weight:{props.reduxState.weight}</p>
                 ):(
-                    <p>No weight associated</p>
+                    <p className='profileText'>No weight associated</p>
                 )}
-                <Button onClick={() => editView()}>Edit View</Button>
+                </div>
+                <Button className={style.editButton} onClick={() => editView()}>Edit View</Button>
+            </div>
             </div>
             ):(
             <div>
-                <p>Username:{props.reduxState.username}</p>
-                <div>
-                    <p>Age:{age}</p>
+            <p className='username'>Username:{props.reduxState.username}</p>
+            <div className='profileHolder'>
+                <div className='ageHolder'>
+                    <p className='profileText'>Age:{age}</p>
                     <div>
                         <button onClick={() => adjustAgeDown()}>Down</button>
                         <Input onChange={ageInputFieldAge}/>
                         <button onClick={() => adjustAgeUp()}>Up</button>
                     </div>
                 </div>
-                <div>
-                    <p>Feet:{feet}</p>
-                    <button onClick={() => adjustFeetDown()}>Down</button>
-                    <button onClick={() => adjustFeetUp()}>Up</button>
+                <div className='heightHolder'>
+                    <div className='feetHolder'>
+                        <p className='profileText'>Feet:{feet}</p>
+                        <button onClick={() => adjustFeetDown()}>Down</button>
+                        <button onClick={() => adjustFeetUp()}>Up</button>
+                    </div>
+                    <div className='inchesHolder'>
+                        <p className='profileText'>Inches:{inches}</p>
+                        <button onClick={() => adjustInchesDown()}>Down</button>
+                        <button onClick={() => adjustInchesUp()}>Up</button>
+                    </div>
                 </div>
-                <div>
-                    <p>Inches:{inches}</p>
-                    <button onClick={() => adjustInchesDown()}>Down</button>
-                    <button onClick={() => adjustInchesUp()}>Up</button>
-                </div>
-                <div>
-                    <p>Weight:</p>
+                <div className='weightHolder'>
+                    <p className='profileText'>Weight:{weight}</p>
                     <Input onChange={adjustInputFieldWeight}/>
+                    <p className='profileAltText'>* Min:50 Max:600 *</p>
                 </div>
-                <Button onClick={() => confirmChanges()}>Confirm Changes</Button>
+                <Button className={style.editButton} onClick={() => confirmChanges()}>Confirm Changes</Button>
+            </div>
             </div>
             )}
         </div>
