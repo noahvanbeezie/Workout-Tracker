@@ -10,10 +10,17 @@ const styles = makeStyles({
     editButton:{
         position:'relative',
         width:'49.9%',
-        height:'50%',
-        top:'-658px',
-        backgroundColor:'Red',
+        height:'49.9%',
+        top:'-53.958333333333336vw',
+        backgroundColor:'Green',
+        borderTop:'black solid 2px',
+        borderRight:'black solid 2px',
         borderRadius:'0px',
+        fontSize:'3.5vw',
+        '&:hover':{
+            backgroundColor:'Lightgreen'
+        } 
+        
     }
 })
 
@@ -179,8 +186,7 @@ function Profile(props){
                 </div>
                 <div className='weightHolder'>
                     <p className='profileText'>Weight:{weight}</p>
-                    <Input onChange={adjustInputFieldWeight}/>
-                    <p className='profileAltText'>* Min:50 Max:600 *</p>
+                    <Input onChange={adjustInputFieldWeight} placeholder='* Min 50 Max 600 *'/>
                 </div>
                 <Button className={style.editButton} onClick={() => confirmChanges()}>Confirm Changes</Button>
             </div>
