@@ -49,6 +49,7 @@ function Workouts(props){
     const style = styles();
     const username = props.reduxState.username
     const [onLoad,setOnLoad] = useState(false)
+    const [navDisplay,setNavDisplay] = useState(false)
     // Day 1 vars
     const [workoutDay1Name1,setWorkoutDay1Name1] = useState('')
     const [workoutDay1Reps1,setWorkoutDay1Reps1] = useState(1)
@@ -1300,12 +1301,29 @@ function Workouts(props){
     }
     return(
         <div>
-            <div className='pageTitle'>
-                <h1>Workouts</h1>
-                <div className='user'>
-                    <p>Username:{username}</p>
+            <div className='nav'>
+                <div>
+                    <div className='navDropdownButton'
+                         onClick={() => setNavDisplay(!navDisplay)}>
+                    </div>
+                    {navDisplay === true ? (
+                        <div className='navDropdown'>
+                            <div className='navButtonHolder'>
+                                <button onClick={() => props.history.push('/profile')}
+                                className='navButton'>Profile</button>
+                                <button onClick={() => props.history.push('/workouts')}
+                                className='navButton'>Workouts</button>
+                            </div>
+                        </div>
+                    ):(
+                        null
+                    )}
+                </div>
+                <div className='pageTitle'>
+                    <h1 className='pageTitle'>Workout Tracker</h1>
                 </div>
             </div>
+            <div className='workoutPageHolder'>
             <h2 className='day'>Day 1:</h2>
             <div className='workoutHolder'>
                 <div className='workout'>
@@ -2461,7 +2479,9 @@ function Workouts(props){
                     )}
                 </div>
             </div>
+            </div>
         </div>
+
     )
 }
 const mapStateToProps = reduxState => {

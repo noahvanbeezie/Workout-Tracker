@@ -1,9 +1,11 @@
 .profileHolder {
+  position: fixed;
+  top: 120px;
   border: 2px solid black;
   background-color: cyan;
   width: 41.666666666666664vw;
   height: 41.666666666666664vw;
-  margin-left: 30%;
+  margin-left: 55%;
   padding: 0px;
 }
 

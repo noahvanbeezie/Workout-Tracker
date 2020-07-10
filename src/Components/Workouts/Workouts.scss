@@ -1,7 +1,15 @@
-
+.workoutPageHolder{
+    position: fixed;
+    border: 2px solid black;
+    margin-left: 5%;
+    width: 90%;
+    height: 550px;
+    overflow: scroll;
+    top: 130px;
+}
 .workoutHolder{
     display: flex;
-    width: 100vw;
+    width: 100%;
     justify-content: space-evenly;
 }
 .workout{
@@ -11,7 +19,7 @@
     width: 153px;
 }
 .day{
-    width: 100vw;
+    width: 100%;
     text-align: center;
 }
 .text{

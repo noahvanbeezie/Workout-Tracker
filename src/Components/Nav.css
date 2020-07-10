@@ -1,0 +1,63 @@
+.nav {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 110px;
+  background-color: maroon;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-bottom: black 5px double;
+}
+
+.pageTitle {
+  font-family: Impact, fantasy;
+  position: fixed;
+  top: -18px;
+  left: 120px;
+  font-size: 60px;
+  width: 500px;
+}
+
+.navDropdownButton {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 80px;
+  height: 80px;
+  background-color: mediumorchid;
+  border-radius: 50%;
+  border: solid 2px black;
+}
+
+.navDropdownButton:hover {
+  background-color: blue;
+}
+
+.navDropdown {
+  position: fixed;
+  top: 115px;
+  border-right: 5px solid black;
+  border-bottom: 5px solid black;
+  background-color: red;
+  width: 120px;
+  height: 360px;
+}
+
+.navButtonHolder {
+  width: 100%;
+  background-color: royalblue;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navButton {
+  width: 100%;
+  background-color: seagreen;
+}
+/*# sourceMappingURL=Nav.css.map */

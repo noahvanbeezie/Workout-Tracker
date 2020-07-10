@@ -5,12 +5,13 @@ import Axios from 'axios'
 import {connect} from 'react-redux'
 import {makeStyles} from '@material-ui/core/styles'
 import './Profile.css'
+import '../Nav.css'
 
 const styles = makeStyles({
     editButton:{
         position:'relative',
         width:'49.9%',
-        height:'49.9%',
+        height:'50%',
         top:'-53.958333333333336vw',
         backgroundColor:'Green',
         borderTop:'black solid 2px',
@@ -32,6 +33,7 @@ function Profile(props){
     const [feet,setFeet] = useState(null)
     const [inches,setInches] = useState(null)
     const [weight,setWeight] = useState(null)
+    const [navDisplay,setNavDisplay] = useState(false)
 
     function editView(){
         setEdit(!edit)
@@ -131,10 +133,30 @@ function Profile(props){
 
     return(
         <div>
-            <h1 className='profileHeadText'>Profile</h1>
+            <div className='nav'>
+                <div>
+                    <div className='navDropdownButton'
+                         onClick={() => setNavDisplay(!navDisplay)}>
+                    </div>
+                    {navDisplay === true ? (
+                        <div className='navDropdown'>
+                            <div className='navButtonHolder'>
+                                <button onClick={() => props.history.push('/profile')}
+                                className='navButton'>Profile</button>
+                                <button onClick={() => props.history.push('/workouts')}
+                                className='navButton'>Workouts</button>
+                            </div>
+                        </div>
+                    ):(
+                        null
+                    )}
+                </div>
+                <div className='pageTitle'>
+                    <h1 className='pageTitle'>Workout Tracker</h1>
+                </div>
+            </div>
             {edit === false?(
                 <div>
-                <p className='username'>Username:{props.reduxState.username}</p>
                 <div className='profileHolder'>
                 <div className='ageHolder'>
                     {props.reduxState.age ? (
@@ -162,7 +184,6 @@ function Profile(props){
             </div>
             ):(
             <div>
-            <p className='username'>Username:{props.reduxState.username}</p>
             <div className='profileHolder'>
                 <div className='ageHolder'>
                     <p className='profileText'>Age:{age}</p>

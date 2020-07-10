@@ -1,12 +1,13 @@
+
 .profileHolder{
+    position: fixed;
+    top: 120px;
     border: 2px solid black;
     background-color: cyan;
     width: 41.666666666666664vw;
     height: 41.666666666666664vw;
-    margin-left: 30%;
-    padding: 0px;
-    
-    
+    margin-left: 55%;
+    padding: 0px;  
 }
 .profileText{
     font-size: 4.089309878213802vw;
